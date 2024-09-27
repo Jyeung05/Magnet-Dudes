@@ -42,7 +42,7 @@ func _jump():
 		jumpForce = jumpForce*0.9
 	#check if the jump has reached its apex when jump force becomes 0, or if they did a short hop
 	#it will consider it the apex
-	if (jumpForce == 0.0 || Input.is_action_just_released("up")):
+	if (jumpForce == 0.0 || Input.is_action_just_released("ui_up")):
 		
 		apex = true;
 	if (apex == true):
