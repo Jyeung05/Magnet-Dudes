@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpqrfsd1gcngo"]
+[gd_scene load_steps=8 format=3 uid="uid://dmlenyrnudcob"]
 
+[ext_resource type="Script" path="res://background.gd" id="1_0enjb"]
 [ext_resource type="Shader" path="res://blue.gdshader" id="1_k0r8x"]
 [ext_resource type="Texture2D" uid="uid://3ph7alc870k2" path="res://assets/movingNeg.png" id="2_w1vro"]
 [ext_resource type="Shader" path="res://red.gdshader" id="3_8ri6v"]
@@ -20,9 +21,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_0enjb")
 
 [node name="Control" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -51,6 +52,7 @@ texture = ExtResource("2_w1vro")
 stretch_mode = 1
 
 [node name="Control2" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
