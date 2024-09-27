@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://bpqrfsd1gcngo"]
+
+[ext_resource type="Shader" path="res://blue.gdshader" id="1_k0r8x"]
+[ext_resource type="Texture2D" uid="uid://3ph7alc870k2" path="res://assets/movingNeg.png" id="2_w1vro"]
+[ext_resource type="Shader" path="res://red.gdshader" id="3_8ri6v"]
+[ext_resource type="Texture2D" uid="uid://0gieugg8ta8d" path="res://assets/movingPos.png" id="4_eyxy8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xrmdy"]
+shader = ExtResource("1_k0r8x")
+shader_parameter/speed = 0.1
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5ospn"]
+shader = ExtResource("3_8ri6v")
+shader_parameter/speed = 0.3
+
+[node name="background" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="blue_neg" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.504919, 0.684111, 0.934743, 1)
+
+[node name="moving_neg" type="TextureRect" parent="Control"]
+material = SubResource("ShaderMaterial_xrmdy")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_w1vro")
+stretch_mode = 1
+
+[node name="Control2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.969366, 0.649921, 0.673564, 1)
+
+[node name="TextureRect" type="TextureRect" parent="Control2"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5ospn")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_eyxy8")
+stretch_mode = 1
