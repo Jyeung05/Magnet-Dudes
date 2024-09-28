@@ -6,8 +6,9 @@ var apex = false;
 var dashCD = 2;
 @export var speed = 500.0
 @export var dashSpeedUpScalar = 5;
-@export var originalJumpForce = 5000;
-@export var jumpForce = 5000;
+@export var originalJumpForce = 1000;
+@export var jumpForce = 1000;
+@export var magnet_power = 500
 func _ready():
 	pass
 
@@ -24,14 +25,14 @@ func _process(_delta):
 
 
 func _walk():
-	direction = Input.get_vector("left", "right","up" , "down")
+	direction = Input.get_vector("left", "right","nothing" , "down")
 	velocity = direction * speed
 	_jump()
 	move_and_slide()
 	
 	
 func _physics_process(_delta):
-	move_and_collide(Vector2(0, 20)) 
+	move_and_collide(Vector2(0, 5)) 
 
 func _jump():
 	var apex = false;
@@ -39,18 +40,19 @@ func _jump():
 	if Input.is_action_pressed("up"):
 		#subtracts because up is negative in 2d plane
 		velocity.y -= jumpForce
-		jumpForce = jumpForce*0.9
+		jumpForce = jumpForce*0.995
 	#check if the jump has reached its apex when jump force becomes 0, or if they did a short hop
 	#it will consider it the apex
-	if (jumpForce == 0.0 || Input.is_action_just_released("up")):
-		
+	if (jumpForce <= 100.0 || Input.is_action_just_released("up")):
 		apex = true;
+
 	if (apex == true):
 		
 		#increase the speed at which you fall to make jumping more satisfying. this can change later
 		#if it feels wonky
 		#this may or may not be funtionally rn, still looking into it
-		velocity.y += 1;
+		velocity.y += 10000;
+		jumpForce = 0
 		
 		#check if the user is on the floor, then apex can not be true
 	if (is_on_floor()):
@@ -62,6 +64,14 @@ func _jump():
 		jumpForce = originalJumpForce;
 		
 		
+	
+func pull(position: Vector2):
+
+	
+	var pulled_to = (position - global_position).normalized()
+	velocity = pulled_to * magnet_power
+	move_and_slide()
+	 
 	
 	
 

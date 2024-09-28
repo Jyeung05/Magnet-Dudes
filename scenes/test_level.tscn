@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_m6lx5"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_7oeql"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="4_t1jh8"]
-[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="5_iq7vo"]
+[ext_resource type="PackedScene" uid="uid://7rlyrhb0cuek" path="res://scenes/tile_map.tscn" id="5_iq7vo"]
 
 [node name="test_level" type="Node2D"]
 position = Vector2(575, 299)
@@ -27,7 +27,7 @@ collision_layer = 3
 collision_mask = 3
 
 [node name="player1" parent="." instance=ExtResource("2_m6lx5")]
-position = Vector2(-444, 127)
+position = Vector2(-489, 129)
 collision_layer = 16
 collision_mask = 5
 

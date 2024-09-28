@@ -15,3 +15,8 @@ func _switch():
 	await get_tree().create_timer(0.1).timeout
 	print("switch")
 	player1 = !player1
+
+
+
+
+

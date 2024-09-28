@@ -8,6 +8,8 @@ var dashCD = 2;
 @export var dashSpeedUpScalar = 5;
 @export var originalJumpForce = 5000;
 @export var jumpForce = 5000;
+@export var magnet_power = 500
+
 func _ready():
 	pass
 
@@ -60,9 +62,10 @@ func _jump():
 		#reset jump force when you hit the ground.
 	if (is_on_floor()):
 		jumpForce = originalJumpForce;
-		
-		
-	
-	
+func pull(position: Vector2):
 
 	
+	var pulled_to = (position - global_position).normalized()
+	velocity = pulled_to * magnet_power
+	move_and_slide()
+	 

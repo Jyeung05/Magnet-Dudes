@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bl67y8oanwipu"]
+[gd_scene load_steps=6 format=3 uid="uid://bl67y8oanwipu"]
 
 [ext_resource type="Script" path="res://player_2.gd" id="1_x8841"]
 [ext_resource type="Texture2D" uid="uid://bv1x6qmntcylr" path="res://assets/character_red.png" id="2_kwfhi"]
+[ext_resource type="Script" path="res://scenes/pivot.gd" id="3_fhy5h"]
+[ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_6ib81"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
 size = Vector2(128, 127)
@@ -15,3 +17,14 @@ texture = ExtResource("2_kwfhi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1.5)
 shape = SubResource("RectangleShape2D_atxct")
+
+[node name="pivot" type="Node2D" parent="."]
+script = ExtResource("3_fhy5h")
+
+[node name="magnet" parent="pivot" instance=ExtResource("4_6ib81")]
+process_physics_priority = 1
+offset = Vector2(100, 0)
+
+[node name="pivotTimer" type="Timer" parent="pivot"]
+wait_time = 0.6
+one_shot = true
