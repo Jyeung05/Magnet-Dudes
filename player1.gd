@@ -29,9 +29,9 @@ func _walk():
 	direction = Input.get_vector("left", "right","nothing" , "down")
 	velocity = direction * speed
 	if direction.x > 0:  # Moving left
-		$MainSprite.flip_h = true
+		$MainNode/MainSprite.flip_h = true
 	elif direction.x < 0:  # Moving right
-		$MainSprite.flip_h = false
+		$MainNode/MainSprite.flip_h = false
 	_jump()
 	move_and_slide()
 	

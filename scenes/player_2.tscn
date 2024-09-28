@@ -1,10 +1,16 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl67y8oanwipu"]
+[gd_scene load_steps=10 format=3 uid="uid://bl67y8oanwipu"]
 
 [ext_resource type="Script" path="res://player_2.gd" id="1_x8841"]
 [ext_resource type="Texture2D" uid="uid://d5fsxg84hfbh" path="res://assets/red guy.png" id="2_qgc03"]
-[ext_resource type="Script" path="res://pivot2.gd" id="3_03brh"]
+[ext_resource type="Shader" path="res://red.gdshader" id="3_ysg83"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_6ib81"]
-[ext_resource type="Script" path="res://magnet2.gd" id="5_20mwa"]
+[ext_resource type="Texture2D" uid="uid://0gieugg8ta8d" path="res://assets/movingPos.png" id="4_r23ih"]
+[ext_resource type="Script" path="res://pivot2.gd" id="5_6hrly"]
+[ext_resource type="Script" path="res://magnet2.gd" id="7_6j1f7"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f8yxu"]
+shader = ExtResource("3_ysg83")
+shader_parameter/speed = 0.2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
 size = Vector2(126, 102.5)
@@ -12,14 +18,12 @@ size = Vector2(126, 102.5)
 [node name="player2" type="CharacterBody2D"]
 script = ExtResource("1_x8841")
 
-[node name="MainSprite" type="Sprite2D" parent="."]
-texture_filter = 1
-scale = Vector2(6, 6)
-texture = ExtResource("2_qgc03")
+[node name="OverlayNode" type="Node2D" parent="."]
+position = Vector2(0, -12)
 
-[node name="OverlaySprite" type="Sprite2D" parent="."]
+[node name="OverlaySprite" type="Sprite2D" parent="OverlayNode"]
 
-[node name="red" type="Control" parent="OverlaySprite"]
+[node name="red" type="Control" parent="OverlayNode/OverlaySprite"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,14 +32,14 @@ grow_horizontal = 2
 grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
-[node name="moving_neg" type="TextureRect" parent="OverlaySprite/red"]
+[node name="moving_neg" type="TextureRect" parent="OverlayNode/OverlaySprite/red"]
 material = SubResource("ShaderMaterial_f8yxu")
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
+anchor_bottom = -0.5
 offset_left = -63.5
 offset_top = -39.5
 offset_right = 62.5
@@ -44,21 +48,30 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_r23ih")
 stretch_mode = 1
+metadata/_edit_use_anchors_ = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12.25)
-shape = SubResource("RectangleShape2D_atxct")
+[node name="MainNode" type="Node2D" parent="."]
+position = Vector2(0, -12)
+scale = Vector2(6, 6)
 
-[node name="pivot" type="Node2D" parent="."]
-script = ExtResource("3_03brh")
+[node name="pivot" type="Node2D" parent="MainNode"]
+position = Vector2(0, 2)
+scale = Vector2(0.166667, 0.166667)
+script = ExtResource("5_6hrly")
 
-[node name="magnet2" parent="pivot" instance=ExtResource("4_6ib81")]
+[node name="magnet" parent="MainNode/pivot" instance=ExtResource("4_6ib81")]
 process_physics_priority = 1
-position = Vector2(-51, -1)
 offset = Vector2(100, 0)
-script = ExtResource("5_20mwa")
+script = ExtResource("7_6j1f7")
 distance = 256.0
 
-[node name="pivotTimer" type="Timer" parent="pivot"]
+[node name="pivotTimer" type="Timer" parent="MainNode/pivot"]
 wait_time = 0.6
 one_shot = true
+
+[node name="MainSprite" type="Sprite2D" parent="MainNode"]
+texture_filter = 1
+texture = ExtResource("2_qgc03")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_atxct")
