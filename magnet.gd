@@ -52,7 +52,7 @@ func _input(event):
 		
 	target =  get_global_mouse_position()
 	
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.2).timeout
 		
 		
 
@@ -60,7 +60,7 @@ func reverse_interpolate():
 	interpolate(0,0.1)
 
 func magnet():
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.2).timeout
 	var collision_point
 	
 	for i in range(0,5):
@@ -70,7 +70,7 @@ func magnet():
 			if self.is_pull:
 				collision_point.pull(my_pos)
 			else:
-				await get_tree().create_timer(0.5).timeout
+				
 				collision_point.push(my_pos)
 				
 

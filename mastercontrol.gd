@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name MasterControl
 static var player1 = true
-
+@export var GRAVITY = 150
 
 func _ready():
 	player1 = true

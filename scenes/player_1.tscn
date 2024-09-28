@@ -21,6 +21,9 @@ size = Vector2(126, 102)
 [node name="player_1" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_2kw6b")
+jump_height = 500.0
+jump_time_to_peak = 0.5
+jump_time_to_descent = 0.2
 
 [node name="MagWave" type="Node2D" parent="."]
 visible = false

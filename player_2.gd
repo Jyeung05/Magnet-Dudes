@@ -9,12 +9,25 @@ var dashCD = 2;
 @export var originalJumpForce = 1000;
 @export var jumpForce = 1000;
 @export var magnet_power = 500
+
+
+
+@export var jump_height : float
+@export var jump_time_to_peak : float
+@export var jump_time_to_descent : float
+
+@onready var jump_velocity : float = ((2.0 * jump_height) / jump_time_to_peak) * -1.0
+@onready var jump_gravity : float = ((-2.0 * jump_height) / (jump_time_to_peak * jump_time_to_peak)) * -1.0
+@onready var fall_gravity : float = ((-2.0 * jump_height) / (jump_time_to_descent * jump_time_to_descent)) * -1.0
+
+
 func _ready():
 	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
+	
 	if(!player1):
 		if Input.is_action_just_pressed("switch"):
 			_switch()
@@ -23,50 +36,32 @@ func _process(_delta):
 	
 		
 
-
 func _walk():
-	direction = Input.get_vector("left", "right","nothing" , "down")
-	velocity = direction * speed
-	if direction.x > 0:  # Moving left
+
+	if Input.is_action_just_pressed("up") && is_on_floor():
+		_jump()
+	#direction = Input.get_vector("left", "right","nothing" , "down")
+	direction = Input.get_axis("left","right")
+	
+	velocity.x = direction * speed
+	if direction> 0:  # Moving left
 		$MainNode/MainSprite.flip_h = true
-	elif direction.x < 0:  # Moving right
+	elif direction < 0:  # Moving right
 		$MainNode/MainSprite.flip_h = false
-	_jump()
 	move_and_slide()
 	
 	
 func _physics_process(_delta):
-	move_and_collide(Vector2(0, 5)) 
+	velocity.y += GRAVITY
+	if control.player1:
+		velocity.x = 0
+		move_and_slide()
+
+
 
 func _jump():
-	var apex = false;
-	#check if the user wants to jump
-	if Input.is_action_pressed("up"):
-		$jumping.play()
-		#subtracts because up is negative in 2d plane
-		velocity.y -= jumpForce
-		jumpForce = jumpForce*0.995
-	#check if the jump has reached its apex when jump force becomes 0, or if they did a short hop
-	#it will consider it the apex
-	if (jumpForce <= 100.0 || Input.is_action_just_released("up")):
-		apex = true;
-
-	if (apex == true):
-		
-		#increase the speed at which you fall to make jumping more satisfying. this can change later
-		#if it feels wonky
-		#this may or may not be funtionally rn, still looking into it
-		velocity.y += 10000;
-		jumpForce = 0
-		
-		#check if the user is on the floor, then apex can not be true
-	if (is_on_floor()):
-		apex = false;
-		
-		#reset jump force when you hit the ground.
-	if (is_on_floor()):
-		jumpForce = originalJumpForce;
-		
+	velocity.y = jump_velocity
+	$jumping.play()
 		
 	
 func pull(position: Vector2):
