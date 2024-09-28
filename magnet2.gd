@@ -30,7 +30,7 @@ func interpolate(height, duration):
 	
 
 func _input(event):
-	if control.player1:
+	if !control.player1:
 		if event.is_action_pressed("mag"):
 			await get_tree().create_timer(0.5).timeout
 			if(self.is_pull):
