@@ -66,10 +66,16 @@ func _jump():
 		#reset jump force when you hit the ground.
 	if (is_on_floor()):
 		jumpForce = originalJumpForce;
-func pull(position: Vector2):
+func pull(posi: Vector2):
 
 	
-	var pulled_to = (position - global_position).normalized()
-	velocity = pulled_to * magnet_power
+	var pulled_to = (posi - global_position).normalized()
+	velocity = pulled_to 
 	move_and_slide()
-	 
+	
+func push(posi: Vector2):
+	
+	var push_to = (posi - global_position).normalized() * -1
+	velocity = push_to * magnet_power
+	move_and_slide()
+	
