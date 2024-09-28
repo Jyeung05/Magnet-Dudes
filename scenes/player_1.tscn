@@ -1,11 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1x2qhmk57cxx"]
+[gd_scene load_steps=13 format=3 uid="uid://c1x2qhmk57cxx"]
 
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
 [ext_resource type="Texture2D" uid="uid://ddbgmo6cet2hl" path="res://assets/blue guy.png" id="2_5ykrd"]
 [ext_resource type="Shader" path="res://blue.gdshader" id="3_xr7jk"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_gufso"]
 [ext_resource type="Texture2D" uid="uid://3ph7alc870k2" path="res://assets/movingNeg.png" id="4_heab1"]
+[ext_resource type="Texture2D" uid="uid://py5tp3ba08iq" path="res://assets/magnetPull.png" id="5_c6x2e"]
 [ext_resource type="Script" path="res://pivot.gd" id="5_ya33p"]
+[ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="7_widj3"]
+[ext_resource type="Script" path="res://scenes/push_wave_UI.gd" id="8_cto5i"]
+[ext_resource type="Texture2D" uid="uid://ths6dnm7qt7f" path="res://assets/magnetPush.png" id="10_ik0lw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nqg1d"]
 shader = ExtResource("3_xr7jk")
@@ -20,6 +24,164 @@ script = ExtResource("1_2kw6b")
 jump_height = 500.0
 jump_time_to_peak = 0.5
 jump_time_to_descent = 0.2
+
+[node name="MagWave" type="Node2D" parent="."]
+visible = false
+script = ExtResource("5_ya33p")
+
+[node name="Push" type="Node2D" parent="MagWave"]
+visible = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="MagWave/Push"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("8_cto5i")
+
+[node name="Control" type="Control" parent="MagWave/Push/Sprite2D3"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D3/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1
+anchor_top = -0.65
+anchor_right = -0.1
+anchor_bottom = -0.65
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("10_ik0lw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="MagWave/Push"]
+script = ExtResource("8_cto5i")
+
+[node name="Control" type="Control" parent="MagWave/Push/Sprite2D2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D2/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = -0.8
+anchor_right = 0.05
+anchor_bottom = -0.8
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("10_ik0lw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MagWave/Push"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("8_cto5i")
+
+[node name="Control" type="Control" parent="MagWave/Push/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671429
+anchor_top = -0.657143
+anchor_right = 0.671429
+anchor_bottom = -0.657143
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("10_ik0lw")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pull" type="Node2D" parent="MagWave"]
+visible = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="MagWave/Pull"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("8_cto5i")
+
+[node name="Control" type="Control" parent="MagWave/Pull/Sprite2D3"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D3/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1
+anchor_top = -0.65
+anchor_right = -0.1
+anchor_bottom = -0.65
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("5_c6x2e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="MagWave/Pull"]
+script = ExtResource("8_cto5i")
+
+[node name="Control" type="Control" parent="MagWave/Pull/Sprite2D2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D2/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = -0.8
+anchor_right = 0.05
+anchor_bottom = -0.8
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("5_c6x2e")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MagWave/Pull"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("8_cto5i")
+
+[node name="Control" type="Control" parent="MagWave/Pull/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671429
+anchor_top = -0.657143
+anchor_right = 0.671429
+anchor_bottom = -0.657143
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("5_c6x2e")
+metadata/_edit_use_anchors_ = true
 
 [node name="OverlayNode" type="Node2D" parent="."]
 
@@ -75,3 +237,6 @@ texture_filter = 1
 position = Vector2(0, -12)
 scale = Vector2(6, 6)
 texture = ExtResource("2_5ykrd")
+
+[node name="jumping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_widj3")

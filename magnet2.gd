@@ -35,11 +35,16 @@ func _input(event):
 			if(self.is_pull):
 				self.is_pull = false
 				self.is_push = true
+				$"../../../MagWave/Pull".visible = self.is_pull
+				$"../../../MagWave/Push".visible = self.is_push
 			elif(self.is_push):
 				self.is_push = false
 				self.is_pull = true
+				$"../../../MagWave/Pull".visible = self.is_pull
+				$"../../../MagWave/Push".visible = self.is_push
 		if event.is_action_pressed("on_off"):
 			self.on_off = !self.on_off
+			$"../../../MagWave".visible = self.on_off
 	
 	
 		

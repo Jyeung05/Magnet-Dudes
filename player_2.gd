@@ -60,8 +60,8 @@ func _physics_process(_delta):
 
 
 func _jump():
-		velocity.y = jump_velocity
-	
+	velocity.y = jump_velocity
+	$jumping.play()
 		
 	
 func pull(position: Vector2):

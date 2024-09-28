@@ -4,6 +4,9 @@ var pos = Vector2(0, 0)
 var direction;
 var apex = false;
 var dashCD = 2;
+var walking_sound_playing = false
+
+
 @export var speed = 500.0
 @export var dashSpeedUpScalar = 5;
 @export var originalJumpForce = 2000;
@@ -22,7 +25,8 @@ var dashCD = 2;
 
 
 func _ready():
-	pass
+	velocity = Vector2(0,0)
+	
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -45,6 +49,7 @@ func _walk():
 	direction = Input.get_axis("left","right")
 	
 	velocity.x = direction * speed
+	
 	if direction> 0:  # Moving left
 		$MainNode/MainSprite.flip_h = true
 	elif direction < 0:  # Moving right
@@ -62,7 +67,7 @@ func _physics_process(_delta):
 
 func _jump():
 		velocity.y = jump_velocity
-	
+		$jumping.play()
 func pull(position: Vector2):
 
 	

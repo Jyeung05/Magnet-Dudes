@@ -12,6 +12,7 @@ func _process(delta):
 	
 #function to switch player boolean. async await to prevent player from switching twice instantly. 
 func _switch():
+	Switch.play()
 	await get_tree().create_timer(0.1).timeout
 	#print("switch")
 	player1 = !player1
