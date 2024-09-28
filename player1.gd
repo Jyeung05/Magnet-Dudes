@@ -15,7 +15,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	if(player1):
-		if Input.is_action_just_pressed("ui_accept"):
+		if Input.is_action_just_pressed("switch"):
 			_switch()
 		_walk()
 	#_dash()
@@ -24,7 +24,7 @@ func _process(_delta):
 
 
 func _walk():
-	direction = Input.get_vector("ui_left", "ui_right","ui_up" , "ui_down")
+	direction = Input.get_vector("left", "right","nothing" , "down")
 	velocity = direction * speed
 	_jump()
 	move_and_slide()
@@ -36,13 +36,13 @@ func _physics_process(_delta):
 func _jump():
 	var apex = false;
 	#check if the user wants to jump
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("up"):
 		#subtracts because up is negative in 2d plane
 		velocity.y -= jumpForce
 		jumpForce = jumpForce*0.9
 	#check if the jump has reached its apex when jump force becomes 0, or if they did a short hop
 	#it will consider it the apex
-	if (jumpForce == 0.0 || Input.is_action_just_released("ui_up")):
+	if (jumpForce == 0.0 || Input.is_action_just_released("up")):
 		
 		apex = true;
 	if (apex == true):

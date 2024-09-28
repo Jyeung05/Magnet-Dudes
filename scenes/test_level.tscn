@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnop5y8r01gai"]
+[gd_scene load_steps=6 format=3 uid="uid://dnop5y8r01gai"]
 
 [ext_resource type="PackedScene" uid="uid://bdafyvsx12f4n" path="res://scenes/platform.tscn" id="1_yr3l8"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_m6lx5"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_7oeql"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="4_t1jh8"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="5_mtt7e"]
 
 [node name="test_level" type="Node2D"]
 position = Vector2(575, 299)
@@ -12,24 +13,28 @@ position = Vector2(575, 299)
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -573.0
-offset_top = -297.0
-offset_right = 582.0
-offset_bottom = 348.0
+offset_left = -900.0
+offset_top = -539.0
+offset_right = 1072.0
+offset_bottom = 660.0
 grow_horizontal = 1
 grow_vertical = 1
 
 [node name="platform" parent="." instance=ExtResource("1_yr3l8")]
-position = Vector2(2, 171)
+position = Vector2(-220, 280)
 collision_layer = 3
 collision_mask = 3
 
 [node name="player1" parent="." instance=ExtResource("2_m6lx5")]
-position = Vector2(-143, 33)
+position = Vector2(-444, 127)
 collision_layer = 16
-collision_mask = 3
+collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("3_7oeql")]
-position = Vector2(140, 29)
+position = Vector2(-269, 132)
 collision_layer = 32
 collision_mask = 3
+
+[node name="TileMap" parent="." instance=ExtResource("5_mtt7e")]
+position = Vector2(-350, -36)
+layer_0/tile_data = PackedInt32Array(393232, 1, 2, 393233, 1, 2, 393234, 1, 2, 393235, 1, 2, 393236, 1, 2, 393237, 1, 2, 393238, 1, 2, 393239, 1, 2, 393240, 1, 2, 393241, 1, 2, 393242, 1, 2, 393243, 1, 2, 458779, 1, 2, 458780, 1, 2, 458781, 1, 2, 458782, 1, 2, 458783, 1, 2, 458784, 1, 2, 458785, 1, 2, 458786, 1, 2, 458787, 1, 2, 458788, 1, 2, 458789, 1, 2, 458790, 1, 2, -393193, 1, 1, -393192, 1, 1, -393191, 1, 1, -393190, 1, 1, -393189, 1, 1, -393188, 1, 1, -393187, 1, 1, -393186, 1, 1, -393185, 1, 1, -393184, 1, 1, -393183, 1, 1, -393182, 1, 1, -393181, 1, 1, -327644, 1, 1, -327643, 1, 1, -327642, 1, 1, -327641, 1, 1, -327640, 1, 1, -327639, 1, 1, -327638, 1, 1, -327637, 1, 1, -327636, 1, 1)
