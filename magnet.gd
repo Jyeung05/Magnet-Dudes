@@ -16,9 +16,7 @@ func _ready():
 func _process(_delta):
 
 	if(self.on_off):
-		if self.is_pull:
-			print("pulling")
-			magnet_pull()
+		magnet()
 
 func interpolate(height, duration):
 	var tween_offset = get_tree().create_tween()
@@ -54,7 +52,7 @@ func _input(event):
 func reverse_interpolate():
 	interpolate(0,0.1)
 
-func magnet_pull():
+func magnet():
 	await get_tree().create_timer(0.5).timeout
 	var collision_point
 	
@@ -62,8 +60,15 @@ func magnet_pull():
 		if ray_casts[i].is_colliding():
 			var my_pos = get_global_position()
 			collision_point = ray_casts[i].get_collider()
-			collision_point.pull(my_pos)
-		
+			if self.is_pull:
+				collision_point.pull(my_pos)
+			else:
+				await get_tree().create_timer(0.5).timeout
+				collision_point.push(my_pos)
+				
+
+
+
 	#if ray_cast.self.is_colliding():
 		#collision_point = ray_cast.get_collision_point()
 		#
