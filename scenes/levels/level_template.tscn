@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcvvvc48pifs7"]
+
+[ext_resource type="Script" path="res://level.gd" id="1_oc8ue"]
+[ext_resource type="PackedScene" uid="uid://7rlyrhb0cuek" path="res://scenes/tile_map.tscn" id="2_vrjeo"]
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_oc8ue")
+
+[node name="UniversalWalls" type="Node2D" parent="."]
+
+[node name="TileMap" parent="UniversalWalls" instance=ExtResource("2_vrjeo")]
+
+[node name="Player2Walls" type="Node2D" parent="."]
+visible = false
+
+[node name="TileMap" parent="Player2Walls" instance=ExtResource("2_vrjeo")]
+
+[node name="Player1Walls" type="Node2D" parent="."]
+visible = false
+
+[node name="TileMap" parent="Player1Walls" instance=ExtResource("2_vrjeo")]
+position = Vector2(247, 546)
