@@ -25,4 +25,6 @@ project/assembly_name="Magnet Dudes"
 
 [layer_names]
 
-2d_physics/layer_1="Objects"
+2d_physics/layer_1="universal_walls"
+2d_physics/layer_2="player1_walls"
+2d_physics/layer_3="player2_walls"

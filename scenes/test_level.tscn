@@ -1,9 +1,33 @@
-[gd_scene load_steps=5 format=3 uid="uid://dnop5y8r01gai"]
+[gd_scene load_steps=8 format=3 uid="uid://dnop5y8r01gai"]
 
 [ext_resource type="PackedScene" uid="uid://bdafyvsx12f4n" path="res://scenes/platform.tscn" id="1_yr3l8"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_m6lx5"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_7oeql"]
 [ext_resource type="PackedScene" uid="uid://dmlenyrnudcob" path="res://scenes/background.tscn" id="4_t1jh8"]
+[ext_resource type="Texture2D" uid="uid://c6abydspjaypn" path="res://assets/tilemap.png" id="5_bu6oe"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0fng"]
+texture = ExtResource("5_bu6oe")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -1.03125, 0, -1, 0, -2.03125, -8, -2.03446)
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -1, 8, -1, 8, -8, -8, -8)
+3:0/0 = 0
+3:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+3:0/0/physics_layer_0/angular_velocity = 0.0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -2.03125, 0, -2, 0, -1, -8, -1.03125)
+
+[sub_resource type="TileSet" id="TileSet_sspyr"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_r0fng")
 
 [node name="test_level" type="Node2D"]
 position = Vector2(575, 299)
@@ -22,3 +46,7 @@ offset_left = -251.0
 offset_top = -72.0
 offset_right = 291.0
 offset_bottom = -72.0
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_sspyr")
+format = 2
