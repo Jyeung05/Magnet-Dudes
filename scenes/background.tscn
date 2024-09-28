@@ -23,7 +23,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0enjb")
 
-[node name="Control" type="Control" parent="."]
+[node name="red" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -31,7 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="blue_neg" type="ColorRect" parent="Control"]
+[node name="blue_neg" type="ColorRect" parent="red"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.504919, 0.684111, 0.934743, 1)
 
-[node name="moving_neg" type="TextureRect" parent="Control"]
+[node name="moving_neg" type="TextureRect" parent="red"]
 material = SubResource("ShaderMaterial_xrmdy")
 layout_mode = 1
 anchors_preset = 15
@@ -51,7 +52,7 @@ grow_vertical = 2
 texture = ExtResource("2_w1vro")
 stretch_mode = 1
 
-[node name="Control2" type="Control" parent="."]
+[node name="blue" type="Control" parent="."]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -60,7 +61,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Control2"]
+[node name="ColorRect" type="ColorRect" parent="blue"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,7 +70,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.969366, 0.649921, 0.673564, 1)
 
-[node name="TextureRect" type="TextureRect" parent="Control2"]
+[node name="TextureRect" type="TextureRect" parent="blue"]
 texture_filter = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_5ospn")
