@@ -3,11 +3,19 @@
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
 [ext_resource type="Texture2D" uid="uid://ctcir0pbdkepc" path="res://assets/character_blue.png" id="2_yi08p"]
 
+<<<<<<< HEAD
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
 size = Vector2(130, 157)
 
 [node name="player_1" type="CharacterBody2D"]
 scale = Vector2(0.4, 0.4)
+=======
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnj6d"]
+size = Vector2(136, 167)
+
+[node name="player_1" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+>>>>>>> 4afca5d3ebc2944f551a044489c6de419683419c
 script = ExtResource("1_2kw6b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -15,5 +23,10 @@ texture_filter = 1
 texture = ExtResource("2_yi08p")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+<<<<<<< HEAD
 position = Vector2(-7.49999, 16.5)
 shape = SubResource("RectangleShape2D_atxct")
+=======
+position = Vector2(-8, 11.5)
+shape = SubResource("RectangleShape2D_hnj6d")
+>>>>>>> 4afca5d3ebc2944f551a044489c6de419683419c
