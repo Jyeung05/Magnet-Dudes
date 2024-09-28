@@ -1,23 +1,16 @@
-<<<<<<< HEAD
-[gd_scene load_steps=7 format=3 uid="uid://c1x2qhmk57cxx"]
-=======
-[gd_scene load_steps=9 format=3 uid="uid://c1x2qhmk57cxx"]
->>>>>>> f03f361cfb9c565267a98ba242e65d24c1e44797
+[gd_scene load_steps=10 format=3 uid="uid://c1x2qhmk57cxx"]
 
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
 [ext_resource type="Texture2D" uid="uid://ddbgmo6cet2hl" path="res://assets/blue guy.png" id="2_5ykrd"]
 [ext_resource type="Shader" path="res://blue.gdshader" id="3_xr7jk"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_gufso"]
-<<<<<<< HEAD
-[ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="5_7v3nt"]
-=======
 [ext_resource type="Texture2D" uid="uid://3ph7alc870k2" path="res://assets/movingNeg.png" id="4_heab1"]
 [ext_resource type="Script" path="res://pivot.gd" id="5_ya33p"]
+[ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="7_widj3"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nqg1d"]
 shader = ExtResource("3_xr7jk")
 shader_parameter/speed = 0.2
->>>>>>> f03f361cfb9c565267a98ba242e65d24c1e44797
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
 size = Vector2(126, 102)
@@ -75,13 +68,11 @@ offset = Vector2(100, 0)
 wait_time = 0.6
 one_shot = true
 
-<<<<<<< HEAD
-[node name="jumping" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_7v3nt")
-=======
 [node name="MainSprite" type="Sprite2D" parent="MainNode"]
 texture_filter = 1
 position = Vector2(0, -12)
 scale = Vector2(6, 6)
 texture = ExtResource("2_5ykrd")
->>>>>>> f03f361cfb9c565267a98ba242e65d24c1e44797
+
+[node name="jumping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_widj3")
