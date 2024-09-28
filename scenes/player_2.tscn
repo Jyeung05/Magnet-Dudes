@@ -2,14 +2,15 @@
 
 [ext_resource type="Script" path="res://player_2.gd" id="1_x8841"]
 [ext_resource type="Texture2D" uid="uid://d5fsxg84hfbh" path="res://assets/red guy.png" id="2_qgc03"]
+[ext_resource type="Script" path="res://scenes/push_wave_UI.gd" id="3_40fco"]
 [ext_resource type="Shader" path="res://red.gdshader" id="3_ysg83"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_6ib81"]
+[ext_resource type="Texture2D" uid="uid://ths6dnm7qt7f" path="res://assets/magnetPush.png" id="4_inlsg"]
 [ext_resource type="Texture2D" uid="uid://0gieugg8ta8d" path="res://assets/movingPos.png" id="4_r23ih"]
 [ext_resource type="Script" path="res://pivot2.gd" id="5_6hrly"]
+[ext_resource type="Texture2D" uid="uid://py5tp3ba08iq" path="res://assets/magnetPull.png" id="5_26orm"]
 [ext_resource type="Script" path="res://magnet2.gd" id="7_6j1f7"]
-[ext_resource type="Script" path="res://scenes/push_wave_UI.gd" id="8_figt2"]
-[ext_resource type="Shader" path="res://push_wave.gdshader" id="8_yp7dy"]
-[ext_resource type="Texture2D" uid="uid://ths6dnm7qt7f" path="res://assets/magnetPush.png" id="9_7lrcp"]
+[ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="8_fayfd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f8yxu"]
 shader = ExtResource("3_ysg83")
@@ -18,12 +19,167 @@ shader_parameter/speed = 0.2
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
 size = Vector2(126, 102.5)
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_rti7f"]
-shader = ExtResource("8_yp7dy")
-
 [node name="player2" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_x8841")
+
+[node name="MagWave" type="Node2D" parent="."]
+visible = false
+script = ExtResource("5_6hrly")
+
+[node name="Push" type="Node2D" parent="MagWave"]
+visible = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="MagWave/Push"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_40fco")
+
+[node name="Control" type="Control" parent="MagWave/Push/Sprite2D3"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D3/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1
+anchor_top = -0.65
+anchor_right = -0.1
+anchor_bottom = -0.65
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("4_inlsg")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="MagWave/Push"]
+script = ExtResource("3_40fco")
+
+[node name="Control" type="Control" parent="MagWave/Push/Sprite2D2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D2/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = -0.8
+anchor_right = 0.05
+anchor_bottom = -0.8
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("4_inlsg")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MagWave/Push"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("3_40fco")
+
+[node name="Control" type="Control" parent="MagWave/Push/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671429
+anchor_top = -0.657143
+anchor_right = 0.671429
+anchor_bottom = -0.657143
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("4_inlsg")
+metadata/_edit_use_anchors_ = true
+
+[node name="Pull" type="Node2D" parent="MagWave"]
+visible = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="MagWave/Pull"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("3_40fco")
+
+[node name="Control" type="Control" parent="MagWave/Pull/Sprite2D3"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D3/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.1
+anchor_top = -0.65
+anchor_right = -0.1
+anchor_bottom = -0.65
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("5_26orm")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="MagWave/Pull"]
+script = ExtResource("3_40fco")
+
+[node name="Control" type="Control" parent="MagWave/Pull/Sprite2D2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D2/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.05
+anchor_top = -0.8
+anchor_right = 0.05
+anchor_bottom = -0.8
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("5_26orm")
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="MagWave/Pull"]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("3_40fco")
+
+[node name="Control" type="Control" parent="MagWave/Pull/Sprite2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.671429
+anchor_top = -0.657143
+anchor_right = 0.671429
+anchor_bottom = -0.657143
+offset_left = 316.0
+offset_top = -288.0
+offset_right = 436.0
+offset_bottom = 352.0
+texture = ExtResource("5_26orm")
+metadata/_edit_use_anchors_ = true
 
 [node name="OverlayNode" type="Node2D" parent="."]
 position = Vector2(0, -12)
@@ -44,7 +200,7 @@ material = SubResource("ShaderMaterial_f8yxu")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = -0.5
 anchor_right = 0.5
 anchor_bottom = -0.5
 offset_left = -63.5
@@ -83,20 +239,5 @@ texture = ExtResource("2_qgc03")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_atxct")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-script = ExtResource("8_figt2")
-
-[node name="Control" type="Control" parent="Sprite2D"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect" type="TextureRect" parent="Sprite2D/Control"]
-texture_repeat = 2
-material = SubResource("ShaderMaterial_rti7f")
-offset_left = 38.0
-offset_top = -328.0
-offset_right = 678.0
-offset_bottom = 312.0
-texture = ExtResource("9_7lrcp")
+[node name="jumping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_fayfd")
