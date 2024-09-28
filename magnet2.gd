@@ -10,8 +10,9 @@ var is_push = false;
 var on_off = false;
 
 func _ready():
-	pass
-
+	$"../../../MagWave".visible = self.on_off
+	$"../../../MagWave/Pull".visible = self.is_pull
+	$"../../../MagWave/Push".visible = self.is_push
 
 func _process(_delta):
 
