@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://djjgt55gygt2c"]
+[gd_scene load_steps=4 format=3 uid="uid://djjgt55gygt2c"]
 
+[ext_resource type="Script" path="res://scenes/main_menu.gd" id="1_8ncrg"]
 [ext_resource type="Texture2D" uid="uid://drw3mkfxv4vqg" path="res://assets/magneTitle.png" id="1_xud0q"]
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="2_v5veb"]
 
 [node name="main_menu" type="Control"]
 layout_mode = 3
@@ -9,12 +11,45 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8ncrg")
+
+[node name="background2" parent="." instance=ExtResource("2_v5veb")]
+layout_mode = 1
+offset_left = -19.0
+offset_top = -22.0
+offset_right = 14.0
+offset_bottom = 18.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 205.0
-offset_top = -1.0
-offset_right = 949.0
-offset_bottom = 781.0
+offset_left = 403.0
+offset_top = -9.0
+offset_right = 1594.0
+offset_bottom = 1234.0
 texture = ExtResource("1_xud0q")
+
+[node name="play" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 741.0
+offset_top = 607.0
+offset_right = -593.0
+offset_bottom = -340.0
+
+[node name="quit" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.989
+anchor_bottom = 1.0
+offset_left = 766.0
+offset_top = 809.0
+offset_right = -638.88
+offset_bottom = -141.0
+
+[connection signal="pressed" from="play" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

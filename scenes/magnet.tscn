@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkmucuwys7u3p"]
+
+[ext_resource type="Script" path="res://magnet.gd" id="1_8fjof"]
+[ext_resource type="Texture2D" uid="uid://bsm7hisfnisie" path="res://icon.svg" id="1_cdmtq"]
+
+[node name="magnet" type="Sprite2D"]
+scale = Vector2(0.993172, 1)
+texture = ExtResource("1_cdmtq")
+script = ExtResource("1_8fjof")
+distance = 500.0
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+rotation = -2.35619
+target_position = Vector2(0, 500)
+collision_mask = 56
+
+[node name="RayCast2D2" type="RayCast2D" parent="."]
+rotation = -2.00713
+target_position = Vector2(0, 500)
+collision_mask = 56
+
+[node name="RayCast2D3" type="RayCast2D" parent="."]
+rotation = -1.5708
+target_position = Vector2(0, 500)
+collision_mask = 56
+
+[node name="RayCast2D4" type="RayCast2D" parent="."]
+rotation = -1.13446
+target_position = Vector2(0, 500)
+collision_mask = 56
+
+[node name="RayCast2D5" type="RayCast2D" parent="."]
+rotation = -0.785398
+target_position = Vector2(0, 500)
+collision_mask = 56

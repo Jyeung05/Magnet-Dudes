@@ -1,18 +1,33 @@
-[gd_scene load_steps=4 format=3 uid="uid://c1x2qhmk57cxx"]
+[gd_scene load_steps=6 format=3 uid="uid://c1x2qhmk57cxx"]
 
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
-[ext_resource type="Texture2D" uid="uid://ctcir0pbdkepc" path="res://assets/character_blue.png" id="2_yi08p"]
+[ext_resource type="Texture2D" uid="uid://ddbgmo6cet2hl" path="res://assets/blue guy.png" id="2_5ykrd"]
+[ext_resource type="Script" path="res://scenes/pivot.gd" id="3_buvkk"]
+[ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_gufso"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hnj6d"]
-size = Vector2(136, 167)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
+size = Vector2(126, 102)
 
 [node name="player_1" type="CharacterBody2D"]
-scale = Vector2(0.5, 0.5)
 script = ExtResource("1_2kw6b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_yi08p")
+texture_filter = 1
+position = Vector2(7.625, -13.5)
+scale = Vector2(6, 6)
+texture = ExtResource("2_5ykrd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-8, 11.5)
-shape = SubResource("RectangleShape2D_hnj6d")
+position = Vector2(7, -2)
+shape = SubResource("RectangleShape2D_atxct")
+
+[node name="pivot" type="Node2D" parent="."]
+script = ExtResource("3_buvkk")
+
+[node name="magnet" parent="pivot" instance=ExtResource("4_gufso")]
+process_physics_priority = 1
+offset = Vector2(100, 0)
+
+[node name="pivotTimer" type="Timer" parent="pivot"]
+wait_time = 0.6
+one_shot = true
