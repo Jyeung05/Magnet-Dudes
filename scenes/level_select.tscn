@@ -1,0 +1,159 @@
+[gd_scene load_steps=5 format=3 uid="uid://ekvaqsofj0st"]
+
+[ext_resource type="Texture2D" uid="uid://cd4r7ny64xvf7" path="res://assets/back.png" id="1_7lepl"]
+[ext_resource type="Script" path="res://scenes/level_select.gd" id="1_bfjx7"]
+[ext_resource type="PackedScene" uid="uid://dmlenyrnudcob" path="res://scenes/background.tscn" id="1_xbres"]
+[ext_resource type="Texture2D" uid="uid://d1n3oxjllb7fy" path="res://assets/lvl select.png" id="2_r8vrr"]
+
+[node name="level_select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bfjx7")
+
+[node name="background2" parent="." instance=ExtResource("1_xbres")]
+layout_mode = 1
+
+[node name="back" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 19.0
+offset_right = 123.0
+offset_bottom = 121.0
+texture = ExtResource("1_7lepl")
+
+[node name="select" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 135.0
+offset_top = 120.0
+offset_right = 1018.0
+offset_bottom = 474.0
+texture = ExtResource("2_r8vrr")
+
+[node name="back2" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 33.0
+offset_top = 37.0
+offset_right = 109.0
+offset_bottom = 103.0
+
+[node name="lvl1" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 173.0
+offset_top = 161.0
+offset_right = 243.0
+offset_bottom = 271.0
+
+[node name="lvl2" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 316.0
+offset_top = 158.0
+offset_right = 392.0
+offset_bottom = 274.0
+
+[node name="lvl3" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 463.0
+offset_top = 160.0
+offset_right = 537.0
+offset_bottom = 257.0
+
+[node name="lvl4" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 607.0
+offset_top = 158.0
+offset_right = 686.0
+offset_bottom = 262.0
+
+[node name="lvl5" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.019
+anchor_top = 0.083
+anchor_right = 0.019
+anchor_bottom = 0.083
+offset_left = 724.112
+offset_top = 109.216
+offset_right = 822.112
+offset_bottom = 206.216
+
+[node name="lvl6" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 895.0
+offset_top = 154.0
+offset_right = 998.0
+offset_bottom = 252.0
+
+[node name="lvl7" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 166.0
+offset_top = 332.0
+offset_right = 245.0
+offset_bottom = 433.0
+
+[node name="lvl8" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 310.0
+offset_top = 323.0
+offset_right = 397.0
+offset_bottom = 432.0
+
+[node name="lvl9" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 460.0
+offset_top = 339.0
+offset_right = 554.0
+offset_bottom = 444.0
+
+[node name="lvl10" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 598.0
+offset_top = 323.0
+offset_right = 698.0
+offset_bottom = 438.0
+
+[node name="lvl11" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 753.0
+offset_top = 326.0
+offset_right = 846.0
+offset_bottom = 427.0
+
+[node name="lvl12" type="Button" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_left = 910.0
+offset_top = 331.0
+offset_right = 995.0
+offset_bottom = 434.0
+
+[connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
+[connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="lvl5" to="." method="_on_lvl_5_pressed"]
+[connection signal="pressed" from="lvl6" to="." method="_on_lvl_6_pressed"]
+[connection signal="pressed" from="lvl7" to="." method="_on_lvl_7_pressed"]
+[connection signal="pressed" from="lvl8" to="." method="_on_lvl_8_pressed"]
+[connection signal="pressed" from="lvl9" to="." method="_on_lvl_9_pressed"]
+[connection signal="pressed" from="lvl10" to="." method="_on_lvl_10_pressed"]
+[connection signal="pressed" from="lvl11" to="." method="_on_lvl_11_pressed"]
+[connection signal="pressed" from="lvl12" to="." method="_on_lvl_12_pressed"]

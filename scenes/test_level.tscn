@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://bdafyvsx12f4n" path="res://scenes/platform.tscn" id="1_yr3l8"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_m6lx5"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_7oeql"]
-[ext_resource type="PackedScene" uid="uid://dmlenyrnudcob" path="res://scenes/background.tscn" id="4_t1jh8"]
-[ext_resource type="PackedScene" uid="uid://cqmyqymfcbcia" path="res://scenes/tile_map.tscn" id="5_iq7vo"]
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="4_t1jh8"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="5_iq7vo"]
 
 [node name="test_level" type="Node2D"]
 position = Vector2(575, 299)
@@ -13,26 +13,26 @@ position = Vector2(575, 299)
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -9425.0
-offset_top = -4556.0
-offset_right = 9332.0
-offset_bottom = 5953.0
+offset_left = -9329.0
+offset_top = -4288.0
+offset_right = 9428.0
+offset_bottom = 6221.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.00165332
 
 [node name="platform" parent="." instance=ExtResource("1_yr3l8")]
-position = Vector2(2, 171)
+position = Vector2(-220, 280)
 collision_layer = 3
 collision_mask = 3
 
 [node name="player1" parent="." instance=ExtResource("2_m6lx5")]
-position = Vector2(-143, 33)
+position = Vector2(-444, 127)
 collision_layer = 16
-collision_mask = 3
+collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("3_7oeql")]
-position = Vector2(140, 29)
+position = Vector2(-72, -82)
 collision_layer = 32
 collision_mask = 3
 

@@ -42,6 +42,7 @@ grow_vertical = 2
 color = Color(0.504919, 0.684111, 0.934743, 1)
 
 [node name="moving_neg" type="TextureRect" parent="red"]
+texture_repeat = 2
 material = SubResource("ShaderMaterial_xrmdy")
 layout_mode = 1
 anchors_preset = 15
@@ -71,7 +72,6 @@ grow_vertical = 2
 color = Color(0.969366, 0.649921, 0.673564, 1)
 
 [node name="TextureRect" type="TextureRect" parent="blue"]
-texture_filter = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_5ospn")
 layout_mode = 1
