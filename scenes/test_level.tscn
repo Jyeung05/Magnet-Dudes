@@ -31,3 +31,5 @@ collision_mask = 3
 
 [node name="player2" parent="." instance=ExtResource("3_7oeql")]
 position = Vector2(140, 29)
+collision_layer = 32
+collision_mask = 3
