@@ -7,10 +7,13 @@
 size = Vector2(128, 127)
 
 [node name="player2" type="CharacterBody2D"]
+scale = Vector2(0.3, 0.3)
 script = ExtResource("1_x8841")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("2_kwfhi")
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, 1.5)
