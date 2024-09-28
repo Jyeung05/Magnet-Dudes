@@ -4,9 +4,10 @@ extends Node2D
 
 
 func _process(delta):
-	await get_tree().create_timer(0.05).timeout
-	var target = get_global_mouse_position()
-	look_at(target)
+	if control.player1:
+		await get_tree().create_timer(0.05).timeout
+		var target = get_global_mouse_position()
+		look_at(target)
 
 func _input(event):
 	pass

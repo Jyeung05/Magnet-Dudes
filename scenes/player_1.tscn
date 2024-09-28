@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
 [ext_resource type="Texture2D" uid="uid://ddbgmo6cet2hl" path="res://assets/blue guy.png" id="2_5ykrd"]
-[ext_resource type="Script" path="res://scenes/pivot.gd" id="3_buvkk"]
+[ext_resource type="Script" path="res://pivot.gd" id="3_buvkk"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_gufso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
