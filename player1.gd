@@ -31,7 +31,7 @@ func _walk():
 	
 	
 func _physics_process(_delta):
-	move_and_collide(Vector2(0, 20)) 
+	move_and_collide(Vector2(0, 10)) 
 
 func _jump():
 	var apex = false;
@@ -50,7 +50,7 @@ func _jump():
 		#increase the speed at which you fall to make jumping more satisfying. this can change later
 		#if it feels wonky
 		#this may or may not be funtionally rn, still looking into it
-		velocity.y += 1;
+		velocity.y += 0.05;
 		
 		#check if the user is on the floor, then apex can not be true
 	if (is_on_floor()):

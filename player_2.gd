@@ -24,14 +24,14 @@ func _process(_delta):
 
 
 func _walk():
-	direction = Input.get_vector("left", "right","up" , "down")
+	direction = Input.get_vector("left", "right","nothing" , "down")
 	velocity = direction * speed
 	_jump()
 	move_and_slide()
 	
 	
 func _physics_process(_delta):
-	move_and_collide(Vector2(0, 20)) 
+	move_and_collide(Vector2(0, 10)) 
 
 func _jump():
 	var apex = false;
@@ -51,10 +51,9 @@ func _jump():
 		#if it feels wonky
 		#this may or may not be funtionally rn, still looking into it
 		velocity.y += 1;
-		
+		pass
 		#check if the user is on the floor, then apex can not be true
 	if (is_on_floor()):
-		dashCD = 2;
 		apex = false;
 		
 		#reset jump force when you hit the ground.
