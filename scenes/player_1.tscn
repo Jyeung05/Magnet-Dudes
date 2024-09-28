@@ -1,21 +1,24 @@
 [gd_scene load_steps=6 format=3 uid="uid://c1x2qhmk57cxx"]
 
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
-[ext_resource type="Texture2D" uid="uid://ctcir0pbdkepc" path="res://assets/character_blue.png" id="2_yi08p"]
+[ext_resource type="Texture2D" uid="uid://ddbgmo6cet2hl" path="res://assets/blue guy.png" id="2_5ykrd"]
 [ext_resource type="Script" path="res://scenes/pivot.gd" id="3_buvkk"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_gufso"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
-size = Vector2(128, 127)
+size = Vector2(126, 102)
 
 [node name="player_1" type="CharacterBody2D"]
 script = ExtResource("1_2kw6b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_yi08p")
+texture_filter = 1
+position = Vector2(7.625, -13.5)
+scale = Vector2(6, 6)
+texture = ExtResource("2_5ykrd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 1.5)
+position = Vector2(7, -2)
 shape = SubResource("RectangleShape2D_atxct")
 
 [node name="pivot" type="Node2D" parent="."]

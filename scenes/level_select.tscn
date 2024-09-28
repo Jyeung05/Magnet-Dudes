@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cd4r7ny64xvf7" path="res://assets/back.png" id="1_7lepl"]
 [ext_resource type="Script" path="res://scenes/level_select.gd" id="1_bfjx7"]
-[ext_resource type="PackedScene" uid="uid://dmlenyrnudcob" path="res://scenes/background.tscn" id="1_xbres"]
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_xbres"]
 [ext_resource type="Texture2D" uid="uid://d1n3oxjllb7fy" path="res://assets/lvl select.png" id="2_r8vrr"]
 
 [node name="level_select" type="Control"]
@@ -20,60 +20,60 @@ layout_mode = 1
 [node name="back" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 16.0
+offset_left = 12.0
 offset_top = 19.0
-offset_right = 123.0
-offset_bottom = 121.0
+offset_right = 152.0
+offset_bottom = 166.0
 texture = ExtResource("1_7lepl")
 
 [node name="select" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 135.0
-offset_top = 120.0
-offset_right = 1018.0
-offset_bottom = 474.0
+offset_left = 218.0
+offset_top = 182.0
+offset_right = 1717.0
+offset_bottom = 839.0
 texture = ExtResource("2_r8vrr")
 
 [node name="back2" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 33.0
-offset_top = 37.0
-offset_right = 109.0
-offset_bottom = 103.0
+offset_left = 44.0
+offset_top = 52.0
+offset_right = 132.0
+offset_bottom = 139.0
 
 [node name="lvl1" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 173.0
-offset_top = 161.0
-offset_right = 243.0
-offset_bottom = 271.0
+offset_left = 275.0
+offset_top = 269.0
+offset_right = 409.0
+offset_bottom = 443.0
 
 [node name="lvl2" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 316.0
-offset_top = 158.0
-offset_right = 392.0
-offset_bottom = 274.0
+offset_left = 509.0
+offset_top = 245.0
+offset_right = 657.0
+offset_bottom = 465.0
 
 [node name="lvl3" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 463.0
-offset_top = 160.0
-offset_right = 537.0
-offset_bottom = 257.0
+offset_left = 759.0
+offset_top = 255.0
+offset_right = 903.0
+offset_bottom = 430.0
 
 [node name="lvl4" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 607.0
-offset_top = 158.0
-offset_right = 686.0
-offset_bottom = 262.0
+offset_left = 1012.0
+offset_top = 255.0
+offset_right = 1161.0
+offset_bottom = 444.0
 
 [node name="lvl5" type="Button" parent="."]
 show_behind_parent = true
@@ -83,66 +83,66 @@ anchor_left = 0.019
 anchor_top = 0.083
 anchor_right = 0.019
 anchor_bottom = 0.083
-offset_left = 724.112
-offset_top = 109.216
-offset_right = 822.112
-offset_bottom = 206.216
+offset_left = 1213.52
+offset_top = 157.36
+offset_right = 1364.52
+offset_bottom = 354.36
 
 [node name="lvl6" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 895.0
-offset_top = 154.0
-offset_right = 998.0
-offset_bottom = 252.0
+offset_left = 1509.0
+offset_top = 247.0
+offset_right = 1673.0
+offset_bottom = 430.0
 
 [node name="lvl7" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 166.0
-offset_top = 332.0
-offset_right = 245.0
-offset_bottom = 433.0
+offset_left = 285.0
+offset_top = 576.0
+offset_right = 415.0
+offset_bottom = 779.0
 
 [node name="lvl8" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 310.0
-offset_top = 323.0
-offset_right = 397.0
-offset_bottom = 432.0
+offset_left = 518.0
+offset_top = 541.0
+offset_right = 656.0
+offset_bottom = 775.0
 
 [node name="lvl9" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 460.0
-offset_top = 339.0
-offset_right = 554.0
-offset_bottom = 444.0
+offset_left = 770.0
+offset_top = 583.0
+offset_right = 918.0
+offset_bottom = 779.0
 
 [node name="lvl10" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 598.0
-offset_top = 323.0
-offset_right = 698.0
-offset_bottom = 438.0
+offset_left = 1009.0
+offset_top = 586.0
+offset_right = 1164.0
+offset_bottom = 779.0
 
 [node name="lvl11" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 753.0
-offset_top = 326.0
-offset_right = 846.0
-offset_bottom = 427.0
+offset_left = 1255.0
+offset_top = 563.0
+offset_right = 1427.0
+offset_bottom = 761.0
 
 [node name="lvl12" type="Button" parent="."]
 show_behind_parent = true
 layout_mode = 0
-offset_left = 910.0
-offset_top = 331.0
-offset_right = 995.0
-offset_bottom = 434.0
+offset_left = 1531.0
+offset_top = 579.0
+offset_right = 1673.0
+offset_bottom = 775.0
 
 [connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
 [connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]

@@ -28,6 +28,10 @@ func _process(_delta):
 func _walk():
 	direction = Input.get_vector("left", "right","nothing" , "down")
 	velocity = direction * speed
+	if direction.x > 0:  # Moving left
+		$Sprite2D.flip_h = true
+	elif direction.x < 0:  # Moving right
+		$Sprite2D.flip_h = false
 	_jump()
 	move_and_slide()
 	

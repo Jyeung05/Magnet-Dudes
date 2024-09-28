@@ -8,11 +8,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xrmdy"]
 shader = ExtResource("1_k0r8x")
-shader_parameter/speed = 0.1
+shader_parameter/speed = 0.2
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5ospn"]
 shader = ExtResource("3_8ri6v")
-shader_parameter/speed = 0.3
+shader_parameter/speed = 0.2
 
 [node name="background2" type="Control"]
 layout_mode = 3
@@ -71,7 +71,6 @@ grow_vertical = 2
 color = Color(0.969366, 0.649921, 0.673564, 1)
 
 [node name="TextureRect" type="TextureRect" parent="blue"]
-texture_filter = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_5ospn")
 layout_mode = 1
