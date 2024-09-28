@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtq0kyda08ss"]
+[gd_scene load_steps=8 format=3 uid="uid://dmlenyrnudcob"]
 
 [ext_resource type="Script" path="res://background.gd" id="1_0enjb"]
 [ext_resource type="Shader" path="res://blue.gdshader" id="1_k0r8x"]

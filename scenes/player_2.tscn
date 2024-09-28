@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://bv1x6qmntcylr" path="res://assets/character_red.png" id="2_kwfhi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
-size = Vector2(128, 127)
+size = Vector2(125, 157)
 
 [node name="player2" type="CharacterBody2D"]
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.4, 0.4)
 script = ExtResource("1_x8841")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -16,5 +16,6 @@ texture = ExtResource("2_kwfhi")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 1.5)
+position = Vector2(5, 16.5)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_atxct")
