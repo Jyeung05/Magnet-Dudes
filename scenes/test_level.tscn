@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_m6lx5"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_7oeql"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="4_t1jh8"]
-[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="5_mtt7e"]
+[ext_resource type="PackedScene" path="res://scenes/tile_map.tscn" id="5_iq7vo"]
 
 [node name="test_level" type="Node2D"]
 position = Vector2(575, 299)
@@ -13,12 +13,13 @@ position = Vector2(575, 299)
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -900.0
-offset_top = -539.0
-offset_right = 1072.0
-offset_bottom = 660.0
+offset_left = -9329.0
+offset_top = -4288.0
+offset_right = 9428.0
+offset_bottom = 6221.0
 grow_horizontal = 1
 grow_vertical = 1
+rotation = 0.00165332
 
 [node name="platform" parent="." instance=ExtResource("1_yr3l8")]
 position = Vector2(-220, 280)
@@ -31,10 +32,9 @@ collision_layer = 16
 collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("3_7oeql")]
-position = Vector2(-269, 132)
+position = Vector2(-72, -82)
 collision_layer = 32
 collision_mask = 3
 
-[node name="TileMap" parent="." instance=ExtResource("5_mtt7e")]
-position = Vector2(-350, -36)
-layer_0/tile_data = PackedInt32Array(393232, 1, 2, 393233, 1, 2, 393234, 1, 2, 393235, 1, 2, 393236, 1, 2, 393237, 1, 2, 393238, 1, 2, 393239, 1, 2, 393240, 1, 2, 393241, 1, 2, 393242, 1, 2, 393243, 1, 2, 458779, 1, 2, 458780, 1, 2, 458781, 1, 2, 458782, 1, 2, 458783, 1, 2, 458784, 1, 2, 458785, 1, 2, 458786, 1, 2, 458787, 1, 2, 458788, 1, 2, 458789, 1, 2, 458790, 1, 2, -393193, 1, 1, -393192, 1, 1, -393191, 1, 1, -393190, 1, 1, -393189, 1, 1, -393188, 1, 1, -393187, 1, 1, -393186, 1, 1, -393185, 1, 1, -393184, 1, 1, -393183, 1, 1, -393182, 1, 1, -393181, 1, 1, -327644, 1, 1, -327643, 1, 1, -327642, 1, 1, -327641, 1, 1, -327640, 1, 1, -327639, 1, 1, -327638, 1, 1, -327637, 1, 1, -327636, 1, 1)
+[node name="TileMap" parent="." instance=ExtResource("5_iq7vo")]
+layer_0/tile_data = PackedInt32Array(393194, 1, 0, 393195, 1, 0, 393196, 1, 0, 393197, 1, 0, 393198, 1, 0, 393199, 1, 0, 393200, 1, 0, 393201, 1, 0, 393202, 1, 0, 393203, 1, 0, 393204, 1, 0, 393205, 1, 0, 393206, 1, 0, 393207, 1, 0, 393208, 1, 0, 393209, 1, 0, 393210, 1, 0, 393211, 1, 0, 393212, 1, 0, 393213, 1, 0, 393214, 1, 0, 393215, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327688, 1, 0, 262153, 1, 0, 262154, 1, 0, 262155, 1, 0, 262156, 1, 0, 262157, 1, 0, 262158, 1, 0, 262159, 1, 0, 262160, 1, 0, 262161, 1, 0, 262162, 1, 0, 262163, 1, 0, 262164, 1, 0, 262165, 1, 0, 262166, 1, 0, 262167, 1, 0, 196631, 1, 0, 131095, 1, 0, 65559, 1, 0, 65560, 1, 0, 65561, 1, 0, 65562, 1, 0, 65563, 1, 0, 65564, 1, 0, 28, 1, 0, -65508, 1, 0, -131044, 1, 0, -196580, 1, 0, -262116, 1, 0, -327652, 1, 0, -393188, 1, 0, -458723, 1, 0, 327665, 1, 1, 262129, 1, 1, 196593, 1, 1, 131057, 1, 1, 65521, 1, 1, -15, 1, 1, -65551, 1, 1, -131087, 1, 1, -196623, 1, 1, -262159, 1, 1, 196623, 1, 2, 131087, 1, 2, 131088, 1, 2, 65552, 1, 2, 16, 1, 2, -65520, 1, 2, -131056, 1, 2, -196592, 1, 2, -262128, 1, 2, -327664, 1, 2, -393200, 1, 2)
