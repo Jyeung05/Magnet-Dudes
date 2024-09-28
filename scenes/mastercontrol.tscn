@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://mastercontrol.gd" id="1_pij3g"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_goj4b"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_sp7dj"]
+[ext_resource type="PackedScene" uid="uid://dmlenyrnudcob" path="res://scenes/background.tscn" id="4_wxr5i"]
 
 [node name="master_control" type="CharacterBody2D"]
 script = ExtResource("1_pij3g")

@@ -22,3 +22,7 @@ control="*res://mastercontrol.gd"
 [dotnet]
 
 project/assembly_name="Magnet Dudes"
+
+[layer_names]
+
+2d_physics/layer_1="Objects"
