@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 control="*res://mastercontrol.gd"
+Song="*res://scenes/song.tscn"
+Switch="*res://scenes/switch.tscn"
 
 [display]
 

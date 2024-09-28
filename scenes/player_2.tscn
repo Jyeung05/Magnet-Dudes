@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl67y8oanwipu"]
+[gd_scene load_steps=7 format=3 uid="uid://bl67y8oanwipu"]
 
 [ext_resource type="Script" path="res://player_2.gd" id="1_x8841"]
 [ext_resource type="Texture2D" uid="uid://d5fsxg84hfbh" path="res://assets/red guy.png" id="2_qgc03"]
 [ext_resource type="Script" path="res://scenes/pivot.gd" id="3_fhy5h"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_6ib81"]
+[ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="5_2c6fs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_atxct"]
 size = Vector2(124, 101)
@@ -30,3 +31,6 @@ offset = Vector2(100, 0)
 [node name="pivotTimer" type="Timer" parent="pivot"]
 wait_time = 0.6
 one_shot = true
+
+[node name="jumping" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_2c6fs")

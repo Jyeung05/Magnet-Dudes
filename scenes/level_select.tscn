@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ekvaqsofj0st"]
+[gd_scene load_steps=6 format=3 uid="uid://ekvaqsofj0st"]
 
 [ext_resource type="Texture2D" uid="uid://cd4r7ny64xvf7" path="res://assets/back.png" id="1_7lepl"]
 [ext_resource type="Script" path="res://scenes/level_select.gd" id="1_bfjx7"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_xbres"]
 [ext_resource type="Texture2D" uid="uid://d1n3oxjllb7fy" path="res://assets/lvl select.png" id="2_r8vrr"]
+[ext_resource type="AudioStream" uid="uid://deg3ot8bnxjd3" path="res://assets/coin-collect-retro-8-bit-sound-effect-145251.mp3" id="5_ftlvk"]
 
 [node name="level_select" type="Control"]
 layout_mode = 3
@@ -143,6 +144,9 @@ offset_left = 1531.0
 offset_top = 579.0
 offset_right = 1673.0
 offset_bottom = 775.0
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ftlvk")
 
 [connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
 [connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]

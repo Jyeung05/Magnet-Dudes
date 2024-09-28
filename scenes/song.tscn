@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://e7u81l00db5p"]
+
+[ext_resource type="AudioStream" uid="uid://wsaoh8ii6ys" path="res://assets/Loneliness 8-bit Relaxing music.mp3" id="1_nidcf"]
+
+[node name="song" type="AudioStreamPlayer"]
+stream = ExtResource("1_nidcf")
+volume_db = -12.18
+autoplay = true

@@ -4,6 +4,7 @@ var pos = Vector2(0, 0)
 var direction;
 var apex = false;
 var dashCD = 2;
+var walking_sound_playing = false
 @export var speed = 500.0
 @export var dashSpeedUpScalar = 5;
 @export var originalJumpForce = 5000;
@@ -28,6 +29,7 @@ func _process(_delta):
 func _walk():
 	direction = Input.get_vector("left", "right","nothing" , "down")
 	velocity = direction * speed
+	
 	if direction.x > 0:  # Moving left
 		$Sprite2D.flip_h = true
 	elif direction.x < 0:  # Moving right
@@ -43,6 +45,7 @@ func _jump():
 	var apex = false;
 	#check if the user wants to jump
 	if Input.is_action_pressed("up"):
+		$jumping.play()
 		#subtracts because up is negative in 2d plane
 		velocity.y -= jumpForce
 		jumpForce = jumpForce*0.9

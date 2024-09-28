@@ -42,6 +42,7 @@ func _jump():
 	var apex = false;
 	#check if the user wants to jump
 	if Input.is_action_pressed("up"):
+		$jumping.play()
 		#subtracts because up is negative in 2d plane
 		velocity.y -= jumpForce
 		jumpForce = jumpForce*0.995
