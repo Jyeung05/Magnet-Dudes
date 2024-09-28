@@ -28,9 +28,9 @@ func _walk():
 	direction = Input.get_vector("left", "right","nothing" , "down")
 	velocity = direction * speed
 	if direction.x > 0:  # Moving left
-		$Sprite2D.flip_h = true
+		$MainNode/MainSprite.flip_h = true
 	elif direction.x < 0:  # Moving right
-		$Sprite2D.flip_h = false
+		$MainNode/MainSprite.flip_h = false
 	_jump()
 	move_and_slide()
 	
@@ -61,7 +61,6 @@ func _jump():
 		
 		#check if the user is on the floor, then apex can not be true
 	if (is_on_floor()):
-		dashCD = 2;
 		apex = false;
 		
 		#reset jump force when you hit the ground.
@@ -77,7 +76,11 @@ func pull(position: Vector2):
 	velocity = pulled_to * magnet_power
 	move_and_slide()
 	 
+func push(posi: Vector2):
 	
+	var push_to = (posi - global_position).normalized() * -1
+	velocity = push_to * magnet_power
+	move_and_slide()
 	
 
 	

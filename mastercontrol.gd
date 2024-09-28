@@ -14,7 +14,7 @@ func _process(delta):
 func _switch():
 	Switch.play()
 	await get_tree().create_timer(0.1).timeout
-	print("switch")
+	#print("switch")
 	player1 = !player1
 
 

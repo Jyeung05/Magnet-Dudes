@@ -31,15 +31,15 @@ func _walk():
 	velocity = direction * speed
 	
 	if direction.x > 0:  # Moving left
-		$Sprite2D.flip_h = true
+		$MainNode/MainSprite.flip_h = true
 	elif direction.x < 0:  # Moving right
-		$Sprite2D.flip_h = false
+		$MainNode/MainSprite.flip_h = false
 	_jump()
 	move_and_slide()
 	
 	
 func _physics_process(_delta):
-	move_and_collide(Vector2(0, 20)) 
+	move_and_collide(Vector2(0, 10)) 
 
 func _jump():
 	var apex = false;
@@ -59,7 +59,7 @@ func _jump():
 		#increase the speed at which you fall to make jumping more satisfying. this can change later
 		#if it feels wonky
 		#this may or may not be funtionally rn, still looking into it
-		velocity.y += 1;
+		velocity.y += 0.05;
 		
 		#check if the user is on the floor, then apex can not be true
 	if (is_on_floor()):
@@ -69,10 +69,16 @@ func _jump():
 		#reset jump force when you hit the ground.
 	if (is_on_floor()):
 		jumpForce = originalJumpForce;
-func pull(position: Vector2):
+func pull(posi: Vector2):
 
 	
-	var pulled_to = (position - global_position).normalized()
-	velocity = pulled_to * magnet_power
+	var pulled_to = (posi - global_position).normalized()
+	velocity = pulled_to 
 	move_and_slide()
-	 
+	
+func push(posi: Vector2):
+	
+	var push_to = (posi - global_position).normalized() * -1
+	velocity = push_to * magnet_power
+	move_and_slide()
+	
