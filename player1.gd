@@ -82,3 +82,11 @@ func push(posi: Vector2):
 	velocity = push_to * magnet_power
 	move_and_slide()
 	
+func die():
+	$ded.play()
+	await get_tree().create_timer(0.3).timeout
+	get_tree().reload_current_scene()
+
+func _on_area_2d_body_entered(body):
+		die()
+	

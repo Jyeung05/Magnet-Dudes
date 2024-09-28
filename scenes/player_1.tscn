@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1x2qhmk57cxx"]
+[gd_scene load_steps=12 format=3 uid="uid://c1x2qhmk57cxx"]
 
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
 [ext_resource type="Texture2D" uid="uid://ddbgmo6cet2hl" path="res://assets/blue guy.png" id="2_5ykrd"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://3ph7alc870k2" path="res://assets/movingNeg.png" id="4_heab1"]
 [ext_resource type="Script" path="res://pivot.gd" id="5_ya33p"]
 [ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="7_widj3"]
+[ext_resource type="AudioStream" uid="uid://d23erht4gh7kf" path="res://assets/pop-94319.mp3" id="8_xl7m6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15dbw"]
+size = Vector2(98, 82)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_nqg1d"]
 shader = ExtResource("3_xr7jk")
@@ -17,7 +21,18 @@ size = Vector2(126, 102)
 
 [node name="player_1" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_2kw6b")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5, 5)
+shape = SubResource("RectangleShape2D_15dbw")
+debug_color = Color(0.916055, 0.20652, 0.509695, 0.42)
 
 [node name="OverlayNode" type="Node2D" parent="."]
 
@@ -56,6 +71,12 @@ shape = SubResource("RectangleShape2D_atxct")
 
 [node name="MainNode" type="Node2D" parent="."]
 
+[node name="MainSprite" type="Sprite2D" parent="MainNode"]
+texture_filter = 1
+position = Vector2(0, -12)
+scale = Vector2(6, 6)
+texture = ExtResource("2_5ykrd")
+
 [node name="pivot" type="Node2D" parent="MainNode"]
 script = ExtResource("5_ya33p")
 
@@ -68,11 +89,10 @@ offset = Vector2(100, 0)
 wait_time = 0.6
 one_shot = true
 
-[node name="MainSprite" type="Sprite2D" parent="MainNode"]
-texture_filter = 1
-position = Vector2(0, -12)
-scale = Vector2(6, 6)
-texture = ExtResource("2_5ykrd")
-
 [node name="jumping" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_widj3")
+
+[node name="ded" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_xl7m6")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

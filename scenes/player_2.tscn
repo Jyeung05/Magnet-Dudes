@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bl67y8oanwipu"]
+[gd_scene load_steps=13 format=3 uid="uid://bl67y8oanwipu"]
 
 [ext_resource type="Script" path="res://player_2.gd" id="1_x8841"]
 [ext_resource type="Texture2D" uid="uid://d5fsxg84hfbh" path="res://assets/red guy.png" id="2_qgc03"]
@@ -8,6 +8,10 @@
 [ext_resource type="Script" path="res://pivot2.gd" id="5_6hrly"]
 [ext_resource type="Script" path="res://magnet2.gd" id="7_6j1f7"]
 [ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="8_fayfd"]
+[ext_resource type="AudioStream" uid="uid://d23erht4gh7kf" path="res://assets/pop-94319.mp3" id="9_wh2rb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbcy0"]
+size = Vector2(92, 80)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f8yxu"]
 shader = ExtResource("3_ysg83")
@@ -18,7 +22,18 @@ size = Vector2(126, 102.5)
 
 [node name="player2" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_x8841")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_xbcy0")
+debug_color = Color(0.946517, 0.0909543, 0.531952, 0.42)
 
 [node name="OverlayNode" type="Node2D" parent="."]
 position = Vector2(0, -12)
@@ -80,3 +95,9 @@ shape = SubResource("RectangleShape2D_atxct")
 
 [node name="jumping" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_fayfd")
+
+[node name="ded" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_wh2rb")
+volume_db = -13.735
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

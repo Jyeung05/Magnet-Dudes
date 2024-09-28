@@ -20,3 +20,8 @@ visible = false
 
 [node name="TileMap" parent="Player1Walls" instance=ExtResource("2_vrjeo")]
 position = Vector2(247, 546)
+
+[node name="spike" type="Node2D" parent="."]
+
+[node name="TileMap" type="TileMap" parent="spike"]
+format = 2
