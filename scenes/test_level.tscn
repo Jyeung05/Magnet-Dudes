@@ -32,6 +32,17 @@ sources/0 = SubResource("TileSetAtlasSource_r0fng")
 [node name="test_level" type="Node2D"]
 position = Vector2(575, 299)
 
+[node name="background" parent="." instance=ExtResource("4_t1jh8")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -573.0
+offset_top = -297.0
+offset_right = 582.0
+offset_bottom = 348.0
+grow_horizontal = 1
+grow_vertical = 1
+
 [node name="platform" parent="." instance=ExtResource("1_yr3l8")]
 position = Vector2(2, 171)
 
@@ -40,13 +51,3 @@ position = Vector2(-143, 33)
 
 [node name="player2" parent="." instance=ExtResource("3_7oeql")]
 position = Vector2(140, 29)
-
-[node name="background" parent="." instance=ExtResource("4_t1jh8")]
-offset_left = -251.0
-offset_top = -72.0
-offset_right = 291.0
-offset_bottom = -72.0
-
-[node name="TileMap" type="TileMap" parent="."]
-tile_set = SubResource("TileSet_sspyr")
-format = 2
