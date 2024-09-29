@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="9_5mx6b"]
 [ext_resource type="PackedScene" uid="uid://e277ekr8y0q4" path="res://restart_button.tscn" id="10_4agb1"]
 
-[node name="play_level_4" type="Node2D"]
+[node name="play_level_5" type="Node2D"]
 
 [node name="background2" parent="." instance=ExtResource("2_6myyy")]
 offset_left = -157.0
