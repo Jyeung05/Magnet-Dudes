@@ -11,7 +11,7 @@ var walking_sound_playing = false
 @export var dashSpeedUpScalar = 5;
 @export var originalJumpForce = 2000;
 @export var jumpForce = 2000;
-@export var magnet_power = 500
+@export var magnet_power = 1000
 
 
 
@@ -25,7 +25,7 @@ var walking_sound_playing = false
 
 
 func _ready():
-	velocity = Vector2(0,0)
+	pass
 	
 
 

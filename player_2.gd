@@ -8,7 +8,7 @@ var dashCD = 2;
 @export var dashSpeedUpScalar = 5;
 @export var originalJumpForce = 1000;
 @export var jumpForce = 1000;
-@export var magnet_power = 500
+@export var magnet_power = 1000
 
 
 
