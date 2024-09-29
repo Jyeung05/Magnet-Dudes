@@ -21,8 +21,8 @@ func _physics_process(delta):
 
 
 
-func pull(position: Vector2):
-	var pulled_to = (position - global_position).normalized()
+func pull(posi: Vector2):
+	var pulled_to = (posi - global_position).normalized()
 	velocity = pulled_to * magnet_power
 
 	move_and_slide()
