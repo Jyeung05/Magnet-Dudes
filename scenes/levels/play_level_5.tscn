@@ -18,6 +18,7 @@ offset_bottom = 2000.0
 
 [node name="player1" parent="." instance=ExtResource("3_u6fgn")]
 position = Vector2(278, 976)
+collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("4_s6blb")]
 position = Vector2(962, 974)

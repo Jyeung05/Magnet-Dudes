@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://beyj6as7f3h7c"]
+
+[ext_resource type="Shader" path="res://scenes/crt.gdshader" id="1_5adtn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q1x8e"]
+shader = ExtResource("1_5adtn")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.222
+shader_parameter/scanlines_width = 0.088
+shader_parameter/grille_opacity = 0.169
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 30.783
+shader_parameter/roll_variation = 2.166
+shader_parameter/distort_intensity = 0.036
+shader_parameter/noise_opacity = 0.095
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.069
+shader_parameter/aberration = 0.366
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 1.0
+shader_parameter/clip_warp = true
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/vignette_opacity = 0.407
+
+[node name="crt" type="ColorRect"]
+material = SubResource("ShaderMaterial_q1x8e")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -200.0
+offset_top = -100.0
+offset_right = -200.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2, 1.2)
+metadata/_edit_vertical_guides_ = [2118.0]
