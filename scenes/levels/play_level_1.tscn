@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_s27on"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_dit8j"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_kk2l6"]
-[ext_resource type="PackedScene" path="res://scenes/exit_door_2.tscn" id="4_dwwer"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="4_dwwer"]
 [ext_resource type="PackedScene" uid="uid://dx2qi7wkfwkxj" path="res://scenes/levels/level_1.tscn" id="4_i5fw3"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="5_3t0id"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_c43dp"]
@@ -68,12 +68,12 @@ text = "Get both of the characters to
 their respective door"
 
 [node name="ExitDoor2" parent="." instance=ExtResource("4_dwwer")]
-position = Vector2(1707, 684)
+position = Vector2(1679, 703)
 scale = Vector2(2, 2)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("5_c43dp")]
-position = Vector2(1525, 686)
-scale = Vector2(3, 3)
+position = Vector2(1553, 704)
+scale = Vector2(2, 2)
 
 [node name="player1" parent="." instance=ExtResource("2_dit8j")]
 position = Vector2(187, 612)

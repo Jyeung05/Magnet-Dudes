@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_fbl7o"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_add8m"]
 [ext_resource type="PackedScene" uid="uid://f5uebf6qf0ma" path="res://scenes/levels/level2.tscn" id="3_je2tt"]
-[ext_resource type="PackedScene" path="res://scenes/exit_door_2.tscn" id="4_55i15"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="4_55i15"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_vye7o"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="5_57051"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_ua6ra"]
@@ -37,13 +37,13 @@ size_flags_vertical = 0
 [node name="Level" parent="." instance=ExtResource("3_je2tt")]
 
 [node name="ExitDoor2" parent="." instance=ExtResource("4_55i15")]
-position = Vector2(1732, 758)
+position = Vector2(1668, 753)
 scale = Vector2(2, 2)
 stage = 1
 
 [node name="ExitDoor1" parent="." instance=ExtResource("5_ua6ra")]
 position = Vector2(1536, 753)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 stage = 1
 
 [node name="player1" parent="." instance=ExtResource("4_vye7o")]
