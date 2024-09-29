@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://pvlift5fvgf3"]
+
+[ext_resource type="PackedScene" uid="uid://cc2o2bk7gc1y7" path="res://scenes/levels/level5.tscn" id="1_s081a"]
+[ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="2_8w5pf"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_u6fgn"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="4_1a7f4"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_s6blb"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_hj6wu"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_8ww2y"]
+
+[node name="PlayLevel5" type="Node2D"]
+
+[node name="Level5" parent="." instance=ExtResource("1_s081a")]
+
+[node name="player1" parent="." instance=ExtResource("3_u6fgn")]
+position = Vector2(278, 976)
+collision_mask = 5
+
+[node name="player2" parent="." instance=ExtResource("4_s6blb")]
+position = Vector2(962, 974)
+collision_mask = 3
+
+[node name="Box" parent="." instance=ExtResource("4_1a7f4")]
+position = Vector2(1359, 979)
+
+[node name="Box2" parent="." instance=ExtResource("4_1a7f4")]
+position = Vector2(1236, 982)
+
+[node name="Box3" parent="." instance=ExtResource("4_1a7f4")]
+position = Vector2(799, 985)
+
+[node name="Box4" parent="." instance=ExtResource("4_1a7f4")]
+position = Vector2(1472, 983)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("5_hj6wu")]
+position = Vector2(950, 257)
+scale = Vector2(2, 2)
+
+[node name="ExitDoor2" parent="." instance=ExtResource("6_8ww2y")]
+position = Vector2(1687, 1043)
+scale = Vector2(2, 2)
+
+[node name="Box5" parent="." instance=ExtResource("4_1a7f4")]
+position = Vector2(567, 978)
+
+[node name="Box6" parent="." instance=ExtResource("4_1a7f4")]
+position = Vector2(695, 985)
+
+[node name="floaty_box" parent="." instance=ExtResource("2_8w5pf")]
+position = Vector2(1266, 775)
