@@ -24,7 +24,7 @@ func _ready():
 		$x10.visible = false;
 	if Completed.lvl11completed == true:
 		$x11.visible = false;
-
+	#pass
 func _on_back_2_pressed():
 	$AudioStreamPlayer2D.play()
 	await get_tree().create_timer(0.1).timeout
@@ -57,7 +57,7 @@ func _on_lvl_4_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl3completed == true:
 		await get_tree().create_timer(0.1).timeout
-		pass # Replace with function body.
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_4.tscn")
 
 
 func _on_lvl_5_pressed():

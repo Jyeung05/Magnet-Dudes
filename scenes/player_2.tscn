@@ -26,7 +26,7 @@ size = Vector2(126, 102.5)
 [node name="player2" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 collision_layer = 8
-collision_mask = 5
+collision_mask = 3
 script = ExtResource("1_x8841")
 jump_height = 500.0
 jump_time_to_peak = 0.5
@@ -237,7 +237,6 @@ scale = Vector2(6, 6)
 [node name="MainSprite" type="Sprite2D" parent="MainNode"]
 texture_filter = 1
 position = Vector2(0, 1.19209e-07)
-scale = Vector2(1, 1)
 texture = ExtResource("2_qgc03")
 
 [node name="pivot" type="Node2D" parent="MainNode"]

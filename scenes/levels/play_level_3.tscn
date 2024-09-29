@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://0qguxbh30vcd"]
+[gd_scene load_steps=8 format=3 uid="uid://0qguxbh30vcd"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_vimyo"]
 [ext_resource type="PackedScene" uid="uid://3fcvjwx8rq8" path="res://scenes/levels/level3.tscn" id="2_u7fq8"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_w5nco"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_ledqa"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_hicdg"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="6_m0cxq"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="7_jcx0r"]
 
 [node name="play_level_3" type="Node2D"]
 
@@ -13,6 +15,7 @@ offset_left = -157.0
 offset_top = -76.0
 offset_right = 2200.0
 offset_bottom = 1180.0
+metadata/_edit_use_anchors_ = true
 
 [node name="back_button" parent="." instance=ExtResource("2_w5nco")]
 anchors_preset = 0
@@ -26,6 +29,7 @@ grow_horizontal = 1
 grow_vertical = 1
 size_flags_horizontal = 0
 size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
 
 [node name="Level2" parent="." instance=ExtResource("2_u7fq8")]
 
@@ -34,3 +38,24 @@ position = Vector2(649, 637)
 
 [node name="player2" parent="." instance=ExtResource("4_hicdg")]
 position = Vector2(356, 645)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 550.0
+offset_top = 167.0
+offset_right = 1030.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 22
+text = "Right click to active your magnet
+Left click to change push/pull mode
+This time try pushing one of the dudes over"
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitDoor1" parent="." instance=ExtResource("6_m0cxq")]
+position = Vector2(1568, 432)
+scale = Vector2(2, 2)
+stage = 2
+
+[node name="ExitDoor2" parent="." instance=ExtResource("7_jcx0r")]
+position = Vector2(1482, 432)
+scale = Vector2(2, 2)
+stage = 2
