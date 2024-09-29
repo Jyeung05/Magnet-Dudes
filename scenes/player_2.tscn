@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bl67y8oanwipu"]
+[gd_scene load_steps=16 format=3 uid="uid://bl67y8oanwipu"]
 
 [ext_resource type="Script" path="res://player_2.gd" id="1_x8841"]
 [ext_resource type="Texture2D" uid="uid://d5fsxg84hfbh" path="res://assets/red guy.png" id="2_qgc03"]
@@ -11,6 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://py5tp3ba08iq" path="res://assets/magnetPull.png" id="5_26orm"]
 [ext_resource type="Script" path="res://magnet2.gd" id="7_6j1f7"]
 [ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="8_fayfd"]
+[ext_resource type="AudioStream" uid="uid://d23erht4gh7kf" path="res://assets/pop-94319.mp3" id="9_wh2rb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wvjqp"]
+size = Vector2(50, 40)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_f8yxu"]
 shader = ExtResource("3_ysg83")
@@ -21,12 +25,20 @@ size = Vector2(126, 102.5)
 
 [node name="player2" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
-collision_layer = 8
-collision_mask = 5
+collision_layer = 0
+collision_mask = 0
 script = ExtResource("1_x8841")
 jump_height = 500.0
 jump_time_to_peak = 0.5
 jump_time_to_descent = 0.2
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+collision_layer = 0
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_wvjqp")
 
 [node name="MagWave" type="Node2D" parent="."]
 visible = false
@@ -246,3 +258,9 @@ shape = SubResource("RectangleShape2D_atxct")
 
 [node name="jumping" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("8_fayfd")
+
+[node name="ded" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_wh2rb")
+volume_db = -13.735
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
