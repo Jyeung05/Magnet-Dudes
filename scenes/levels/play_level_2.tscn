@@ -61,3 +61,4 @@ theme_override_font_sizes/font_size = 22
 text = "Right click to active your magnet
 Left click to change push/pull mode
 Try pulling the red dude over"
+editable = false

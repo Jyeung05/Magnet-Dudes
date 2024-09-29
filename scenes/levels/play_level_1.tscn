@@ -46,6 +46,7 @@ offset_right = 1142.0
 offset_bottom = 377.0
 theme_override_font_sizes/font_size = 22
 text = "Press E to change characters"
+editable = false
 
 [node name="TextEdit" type="TextEdit" parent="."]
 texture_filter = 2
@@ -56,6 +57,7 @@ offset_bottom = 408.0
 theme_override_font_sizes/font_size = 22
 text = "Press A and D to move
 Press W to jump"
+editable = false
 
 [node name="TextEdit3" type="TextEdit" parent="."]
 texture_filter = 2
@@ -66,6 +68,7 @@ offset_bottom = 407.0
 theme_override_font_sizes/font_size = 22
 text = "Get both of the characters to
 their respective door"
+editable = false
 
 [node name="ExitDoor2" parent="." instance=ExtResource("4_dwwer")]
 position = Vector2(1679, 703)

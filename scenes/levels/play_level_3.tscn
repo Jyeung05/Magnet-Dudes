@@ -48,6 +48,7 @@ theme_override_font_sizes/font_size = 22
 text = "Right click to active your magnet
 Left click to change push/pull mode
 This time try pushing one of the dudes over"
+editable = false
 metadata/_edit_use_anchors_ = true
 
 [node name="ExitDoor1" parent="." instance=ExtResource("6_m0cxq")]

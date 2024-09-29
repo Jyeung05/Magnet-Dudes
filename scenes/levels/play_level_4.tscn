@@ -33,7 +33,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="player1" parent="." instance=ExtResource("3_2xqug")]
 position = Vector2(1455, 1005)
-collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("4_2qw81")]
 position = Vector2(318, 1009)
@@ -58,3 +57,5 @@ offset_right = 1258.0
 offset_bottom = 84.0
 theme_override_font_sizes/font_size = 22
 text = "Hint: you can use the pull mode to carry each other"
+editable = false
+metadata/_edit_use_anchors_ = true
