@@ -42,12 +42,12 @@ position = Vector2(1849, 957)
 [node name="ExitDoor1" parent="." instance=ExtResource("6_75it1")]
 position = Vector2(293, 211)
 scale = Vector2(2, 2)
-stage = 6
+stage = 10
 
 [node name="ExitDoor2" parent="." instance=ExtResource("7_5ga03")]
 position = Vector2(1843, 210)
 scale = Vector2(2, 2)
-stage = 6
+stage = 10
 
 [node name="Level3" parent="." instance=ExtResource("1_015cd")]
 

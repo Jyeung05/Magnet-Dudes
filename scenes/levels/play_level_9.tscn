@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://clm6nmbbn60my"]
 
-[ext_resource type="PackedScene" uid="uid://duw7fouv7ex15" path="res://scenes/levels/level9.tscn" id="1_ha0su"]
+[ext_resource type="PackedScene" uid="uid://du5mc7w2h7v0w" path="res://scenes/levels/level9.tscn" id="1_ha0su"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="2_75b3m"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="3_tpif0"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_3ahda"]
@@ -68,7 +68,7 @@ scale = Vector2(2, 2)
 stage = 8
 
 [node name="Box" parent="." instance=ExtResource("8_d0yaa")]
-position = Vector2(1568, 511)
+position = Vector2(1383, 499)
 
 [node name="Level3" parent="." instance=ExtResource("1_ha0su")]
 
