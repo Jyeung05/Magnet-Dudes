@@ -41,6 +41,13 @@ offset_bottom = 377.0
 theme_override_font_sizes/font_size = 22
 text = "Press E to change dimensions"
 editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="TextEdit" type="TextEdit" parent="."]
 texture_filter = 2
@@ -52,6 +59,13 @@ theme_override_font_sizes/font_size = 22
 text = "Press A and D to move
 Press W to jump"
 editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="TextEdit3" type="TextEdit" parent="."]
 texture_filter = 2
@@ -63,6 +77,13 @@ theme_override_font_sizes/font_size = 22
 text = "Get both of the characters to
 their respective door"
 editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
 [node name="ExitDoor2" parent="." instance=ExtResource("4_dwwer")]
 position = Vector2(1679, 703)

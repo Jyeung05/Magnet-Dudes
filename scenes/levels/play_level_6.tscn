@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://dqbyfpxpmr0md"]
+
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_0kq5v"]
+[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_vyknb"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_nvsov"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_4cehg"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_jf2oa"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_382m5"]
+[ext_resource type="PackedScene" uid="uid://q7s7q1ri6r8y" path="res://scenes/levels/level6.tscn" id="7_pcfdd"]
+[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="8_rvhsc"]
+
+[node name="play_level_4" type="Node2D"]
+
+[node name="background2" parent="." instance=ExtResource("1_0kq5v")]
+offset_left = -157.0
+offset_top = -76.0
+offset_right = 2200.0
+offset_bottom = 1180.0
+metadata/_edit_use_anchors_ = true
+
+[node name="back_button" parent="." instance=ExtResource("2_vyknb")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 42.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="player1" parent="." instance=ExtResource("3_nvsov")]
+position = Vector2(1650, 883)
+
+[node name="player2" parent="." instance=ExtResource("4_4cehg")]
+position = Vector2(1530, 896)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("5_jf2oa")]
+position = Vector2(1828, 321)
+scale = Vector2(2, 2)
+stage = 5
+
+[node name="ExitDoor2" parent="." instance=ExtResource("6_382m5")]
+position = Vector2(496, 275)
+scale = Vector2(2, 2)
+stage = 5
+
+[node name="Level3" parent="." instance=ExtResource("7_pcfdd")]
+
+[node name="Box9" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1311, 269)
+
+[node name="Box10" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1267, 112)
+
+[node name="Box11" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1173, 260)
+
+[node name="Box12" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1439, 262)
+
+[node name="Box5" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1050, 269)
+
+[node name="Box6" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1051, 160)
+
+[node name="Box7" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(921, 264)
+
+[node name="Box8" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(788, 255)
+
+[node name="Box4" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1394, 859)
+
+[node name="Box3" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1255, 642)
+
+[node name="Box2" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1258, 861)
+
+[node name="Box" parent="." instance=ExtResource("8_rvhsc")]
+position = Vector2(1258, 751)
