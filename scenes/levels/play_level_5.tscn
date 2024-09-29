@@ -37,16 +37,7 @@ position = Vector2(278, 976)
 position = Vector2(962, 974)
 
 [node name="Box" parent="." instance=ExtResource("4_1a7f4")]
-position = Vector2(1359, 979)
-
-[node name="Box2" parent="." instance=ExtResource("4_1a7f4")]
-position = Vector2(1236, 982)
-
-[node name="Box3" parent="." instance=ExtResource("4_1a7f4")]
-position = Vector2(799, 985)
-
-[node name="Box4" parent="." instance=ExtResource("4_1a7f4")]
-position = Vector2(1472, 983)
+position = Vector2(1146, 979)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("5_hj6wu")]
 position = Vector2(966, 290)
@@ -60,9 +51,6 @@ stage = 4
 
 [node name="Box5" parent="." instance=ExtResource("4_1a7f4")]
 position = Vector2(567, 978)
-
-[node name="Box6" parent="." instance=ExtResource("4_1a7f4")]
-position = Vector2(695, 985)
 
 [node name="TextEdit2" type="TextEdit" parent="."]
 texture_filter = 2
