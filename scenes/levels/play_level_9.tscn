@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://clm6nmbbn60my"]
+
+[ext_resource type="PackedScene" uid="uid://bry13vifq7yl5" path="res://scenes/levels/level9.tscn" id="1_2xkwc"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_e4pmc"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_lkcw0"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="4_h765a"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="5_vnpa6"]
+[ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="6_w7mex"]
+
+[node name="play_level_6" type="Node2D"]
+
+[node name="Level3" parent="." instance=ExtResource("1_2xkwc")]
+position = Vector2(11, -33)
+
+[node name="player1" parent="." instance=ExtResource("2_e4pmc")]
+position = Vector2(892, 605)
+collision_layer = 8
+collision_mask = 5
+
+[node name="player2" parent="." instance=ExtResource("3_lkcw0")]
+position = Vector2(141, 971)
+collision_layer = 16
+
+[node name="ExitDoor1" parent="." instance=ExtResource("4_h765a")]
+position = Vector2(974, 635)
+scale = Vector2(2, 2)
+
+[node name="ExitDoor2" parent="." instance=ExtResource("5_vnpa6")]
+position = Vector2(861, 1051)
+scale = Vector2(2, 2)
+
+[node name="floaty_box" parent="." instance=ExtResource("6_w7mex")]
+position = Vector2(797, 540)
