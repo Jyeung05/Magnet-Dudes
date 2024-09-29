@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://clm6nmbbn60my"]
 
-[ext_resource type="PackedScene" uid="uid://bry13vifq7yl5" path="res://scenes/levels/level9.tscn" id="1_ha0su"]
+[ext_resource type="PackedScene" uid="uid://du5mc7w2h7v0w" path="res://scenes/levels/level9.tscn" id="1_ha0su"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="2_75b3m"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="3_tpif0"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_3ahda"]
@@ -51,22 +51,22 @@ virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 
 [node name="player1" parent="." instance=ExtResource("4_3ahda")]
-position = Vector2(243, 1026)
+position = Vector2(105, 1030)
 
 [node name="player2" parent="." instance=ExtResource("5_lnpm5")]
-position = Vector2(83, 1025)
+position = Vector2(217, 1025)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("6_3skof")]
-position = Vector2(174, 302)
+position = Vector2(206, 271)
 scale = Vector2(2, 2)
 stage = 8
 
 [node name="ExitDoor2" parent="." instance=ExtResource("7_68tp4")]
-position = Vector2(62, 306)
+position = Vector2(70, 278)
 scale = Vector2(2, 2)
 stage = 8
 
-[node name="Level9" parent="." instance=ExtResource("1_ha0su")]
-
 [node name="Box" parent="." instance=ExtResource("8_d0yaa")]
-position = Vector2(1149, 481)
+position = Vector2(1568, 511)
+
+[node name="Level3" parent="." instance=ExtResource("1_ha0su")]

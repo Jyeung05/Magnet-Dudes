@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="5_t4a0d"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="6_75it1"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="7_5ga03"]
-[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="8_ks06s"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="8_ks06s"]
 [ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="9_5mx6b"]
 
 [node name="play_level_4" type="Node2D"]
@@ -34,10 +34,10 @@ size_flags_vertical = 0
 metadata/_edit_use_anchors_ = true
 
 [node name="player1" parent="." instance=ExtResource("4_dtt8q")]
-position = Vector2(983, 63)
+position = Vector2(1764, 957)
 
 [node name="player2" parent="." instance=ExtResource("5_t4a0d")]
-position = Vector2(1379, 257)
+position = Vector2(1849, 957)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("6_75it1")]
 position = Vector2(293, 211)

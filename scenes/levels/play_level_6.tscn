@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_jf2oa"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_382m5"]
 [ext_resource type="PackedScene" uid="uid://q7s7q1ri6r8y" path="res://scenes/levels/level6.tscn" id="7_pcfdd"]
-[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="8_rvhsc"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="8_rvhsc"]
 
 [node name="play_level_4" type="Node2D"]
 
