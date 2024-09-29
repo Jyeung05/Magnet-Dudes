@@ -241,6 +241,7 @@ script = ExtResource("5_6hrly")
 
 [node name="magnet" parent="MainNode/pivot" instance=ExtResource("4_6ib81")]
 process_physics_priority = 1
+position = Vector2(31.9999, 0)
 offset = Vector2(100, 0)
 script = ExtResource("7_6j1f7")
 distance = 256.0

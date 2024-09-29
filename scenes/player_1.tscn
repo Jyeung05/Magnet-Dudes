@@ -236,7 +236,7 @@ script = ExtResource("5_ya33p")
 
 [node name="magnet" parent="MainNode/pivot" instance=ExtResource("4_gufso")]
 process_physics_priority = 1
-position = Vector2(3.8147e-06, 9.53674e-07)
+position = Vector2(50, 5.68434e-14)
 offset = Vector2(100, 0)
 
 [node name="pivotTimer" type="Timer" parent="MainNode/pivot"]
