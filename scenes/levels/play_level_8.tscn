@@ -53,29 +53,6 @@ drag_and_drop_selection_enabled = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 
-[node name="Level3" parent="." instance=ExtResource("1_2xkwc")]
-
-[node name="player1" parent="." instance=ExtResource("2_e4pmc")]
-position = Vector2(882, 624)
-collision_layer = 8
-
-[node name="player2" parent="." instance=ExtResource("3_lkcw0")]
-position = Vector2(148, 1011)
-collision_layer = 16
-
-[node name="ExitDoor1" parent="." instance=ExtResource("4_h765a")]
-position = Vector2(995, 672)
-scale = Vector2(2, 2)
-stage = 7
-
-[node name="ExitDoor2" parent="." instance=ExtResource("5_vnpa6")]
-position = Vector2(810, 1087)
-scale = Vector2(2, 2)
-stage = 7
-
-[node name="floaty_box" parent="." instance=ExtResource("6_w7mex")]
-position = Vector2(791, 568)
-
 [node name="back_button" parent="." instance=ExtResource("8_gjwco")]
 anchors_preset = 0
 anchor_right = 0.0
@@ -89,3 +66,24 @@ grow_vertical = 1
 size_flags_horizontal = 0
 size_flags_vertical = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="Level3" parent="." instance=ExtResource("1_2xkwc")]
+
+[node name="player1" parent="." instance=ExtResource("2_e4pmc")]
+position = Vector2(895, 627)
+
+[node name="player2" parent="." instance=ExtResource("3_lkcw0")]
+position = Vector2(697, 994)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("4_h765a")]
+position = Vector2(995, 672)
+scale = Vector2(2, 2)
+stage = 7
+
+[node name="ExitDoor2" parent="." instance=ExtResource("5_vnpa6")]
+position = Vector2(810, 1087)
+scale = Vector2(2, 2)
+stage = 7
+
+[node name="floaty_box" parent="." instance=ExtResource("6_w7mex")]
+position = Vector2(791, 568)

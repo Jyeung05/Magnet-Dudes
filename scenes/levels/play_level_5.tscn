@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://pvlift5fvgf3"]
+[gd_scene load_steps=9 format=3 uid="uid://pvlift5fvgf3"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_1cbuv"]
 [ext_resource type="PackedScene" uid="uid://cc2o2bk7gc1y7" path="res://scenes/levels/level5.tscn" id="1_s081a"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_s6blb"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_hj6wu"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_8ww2y"]
+[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="8_31giu"]
 
 [node name="PlayLevel5" type="Node2D"]
 
@@ -69,3 +70,17 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
+
+[node name="back_button" parent="." instance=ExtResource("8_31giu")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 42.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
