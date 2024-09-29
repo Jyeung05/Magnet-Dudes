@@ -13,8 +13,10 @@ We wish to expand more upon this idea of the two dimensions and magnets by intro
 
 
 
-Magnet Dudes was designed and created by Wesley Chen(wesleyc1223@gmail.com), Jeffrey Yeung(jyeungprivate@gmail.com), Clement Quach(clementcnd@gmail.com)
 
 ## Credits:
 
 Main Music https://www.youtube.com/watch?v=GlUM4rx2Wrw 
+
+
+Magnet Dudes was designed and created by Wesley Chen(wesleyc1223@gmail.com), Jeffrey Yeung(jyeungprivate@gmail.com), Clement Quach(clementcnd@gmail.com)
