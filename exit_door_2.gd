@@ -43,9 +43,9 @@ func _process(delta):
 		if stage == 10:
 			get_tree().change_scene_to_file("res://scenes/levels/play_level_12.tscn")
 			Completed.lvl11completed = true
-		#if stage == 11:
-			#get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
-			#Completed.lvl1completed = true
+		if stage == 11:
+			get_tree().change_scene_to_file("res://scenes/level_select.tscn")
+			Completed.lvl1completed = true
 		#if stage == 12:
 			#get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
 

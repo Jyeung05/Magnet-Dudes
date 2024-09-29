@@ -36,10 +36,12 @@ position = Vector2(1635, 713)
 [node name="ExitDoor1" parent="." instance=ExtResource("6_iqtpt")]
 position = Vector2(1570, 1028)
 scale = Vector2(2, 2)
+stage = 9
 
 [node name="ExitDoor2" parent="." instance=ExtResource("7_bep1h")]
 position = Vector2(1494, 1028)
 scale = Vector2(2, 2)
+stage = 9
 
 [node name="floaty_box4" parent="." instance=ExtResource("5_pkwtb")]
 position = Vector2(1862, 655)
