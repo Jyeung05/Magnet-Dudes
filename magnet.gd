@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 @onready var ray_casts = [$RayCast2D, $RayCast2D2, $RayCast2D3, $RayCast2D4, $RayCast2D5 ]
 @export var distance: float = 256.0
 
@@ -31,8 +31,8 @@ func interpolate(height, duration):
 
 func _input(event):
 	if control.player1:
-		if event.is_action_pressed("mag"):
-			await get_tree().create_timer(0.5).timeout
+		if event.is_action_pressed("mag") || event.is_action_pressed("track_pad_mag"):
+			await get_tree().create_timer(0.2).timeout
 			if(self.is_pull):
 				self.is_pull = false
 				self.is_push = true
@@ -43,7 +43,7 @@ func _input(event):
 				self.is_pull = true
 				$"../../../MagWave/Pull".visible = self.is_pull
 				$"../../../MagWave/Push".visible = self.is_push
-		if event.is_action_pressed("on_off"):
+		if event.is_action_pressed("on_off") || event.is_action_pressed("track_pad_on"):
 			self.on_off = !self.on_off
 			$"../../../MagWave".visible = self.on_off
 	

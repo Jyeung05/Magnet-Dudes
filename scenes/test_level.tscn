@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnop5y8r01gai"]
+[gd_scene load_steps=8 format=3 uid="uid://dnop5y8r01gai"]
 
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_m6lx5"]
+[ext_resource type="PackedScene" uid="uid://d2i6wvy6t3ef0" path="res://scenes/exit_door_2.tscn" id="2_wa86r"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_7oeql"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="3_d28sq"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="4_t1jh8"]
 [ext_resource type="PackedScene" uid="uid://cdepw516nm16b" path="res://scenes/levels/test_level.tscn" id="4_wj2ho"]
 [ext_resource type="PackedScene" path="res://back_button.tscn" id="5_6sq5a"]
@@ -13,14 +15,20 @@ position = Vector2(575, 299)
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -9664.0
-offset_top = -4355.0
-offset_right = 9093.0
-offset_bottom = 6154.0
+offset_left = -8182.0
+offset_top = -3065.0
+offset_right = 10575.0
+offset_bottom = 7444.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.00165332
 metadata/_edit_use_anchors_ = true
+
+[node name="ExitDoor2" parent="." instance=ExtResource("2_wa86r")]
+position = Vector2(724, 755)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("3_d28sq")]
+position = Vector2(637, 748)
 
 [node name="player1" parent="." instance=ExtResource("2_m6lx5")]
 position = Vector2(529, 107)
@@ -28,7 +36,6 @@ collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("3_7oeql")]
 position = Vector2(-110, 197)
-collision_layer = 32
 collision_mask = 3
 
 [node name="Level" parent="." instance=ExtResource("4_wj2ho")]

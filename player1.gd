@@ -11,7 +11,7 @@ var walking_sound_playing = false
 @export var dashSpeedUpScalar = 5;
 @export var originalJumpForce = 2000;
 @export var jumpForce = 2000;
-@export var magnet_power = 500
+@export var magnet_power = 1000
 
 
 
@@ -25,6 +25,8 @@ var walking_sound_playing = false
 
 
 func _ready():
+	GRAVITY = 150
+	push_multiplier = 2
 	velocity = Vector2(0,0)
 	
 
@@ -78,7 +80,7 @@ func pull(position: Vector2):
 func push(posi: Vector2):
 	
 	var push_to = (posi - global_position).normalized() * -1
-	velocity = push_to * magnet_power
+	velocity = push_to * magnet_power * push_multiplier
 	move_and_slide()
 
 	
