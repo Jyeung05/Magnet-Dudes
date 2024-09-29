@@ -13,7 +13,7 @@ func _on_back_2_pressed():
 func _on_lvl_1_pressed():
 	$AudioStreamPlayer2D.play()
 	await get_tree().create_timer(0.1).timeout
-	get_tree().change_scene_to_file("res://scenes/test_level.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
 
 
 func _on_lvl_2_pressed():
@@ -79,4 +79,4 @@ func _on_lvl_11_pressed():
 func _on_lvl_12_pressed():
 	$AudioStreamPlayer2D.play()
 	await get_tree().create_timer(0.1).timeout
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/test_level.tscn")
