@@ -1,6 +1,5 @@
 extends Node2D
 
-@onready var pivotTimer = $pivotTimer
 
 
 func _process(delta):

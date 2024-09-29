@@ -11,12 +11,10 @@ script = ExtResource("1_oc8ue")
 [node name="TileMap" parent="UniversalWalls" instance=ExtResource("2_vrjeo")]
 
 [node name="Player2Walls" type="Node2D" parent="."]
-visible = false
 
 [node name="TileMap" parent="Player2Walls" instance=ExtResource("2_vrjeo")]
 
 [node name="Player1Walls" type="Node2D" parent="."]
-visible = false
 
 [node name="TileMap" parent="Player1Walls" instance=ExtResource("2_vrjeo")]
 position = Vector2(247, 546)
