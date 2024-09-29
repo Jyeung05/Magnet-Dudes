@@ -99,7 +99,6 @@ position = Vector2(187, 612)
 
 [node name="player2" parent="." instance=ExtResource("3_kk2l6")]
 position = Vector2(428, 651)
-collision_layer = 40
 
 [node name="restart_button" parent="." instance=ExtResource("8_1srva")]
 offset_left = 151.0

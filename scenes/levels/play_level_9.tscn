@@ -52,25 +52,25 @@ virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
 
 [node name="player1" parent="." instance=ExtResource("4_3ahda")]
-position = Vector2(243, 1026)
+position = Vector2(105, 1030)
 
 [node name="player2" parent="." instance=ExtResource("5_lnpm5")]
-position = Vector2(83, 1025)
+position = Vector2(217, 1025)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("6_3skof")]
-position = Vector2(174, 302)
+position = Vector2(206, 271)
 scale = Vector2(2, 2)
 stage = 8
 
 [node name="ExitDoor2" parent="." instance=ExtResource("7_68tp4")]
-position = Vector2(62, 306)
+position = Vector2(70, 278)
 scale = Vector2(2, 2)
 stage = 8
 
-[node name="Level9" parent="." instance=ExtResource("1_ha0su")]
-
 [node name="Box" parent="." instance=ExtResource("8_d0yaa")]
-position = Vector2(1149, 481)
+position = Vector2(1568, 511)
+
+[node name="Level3" parent="." instance=ExtResource("1_ha0su")]
 
 [node name="restart_button" parent="." instance=ExtResource("9_3t4du")]
 offset_left = 182.0

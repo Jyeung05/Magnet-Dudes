@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://cfjw827bp7fms"]
+
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_t0o46"]
+[ext_resource type="PackedScene" uid="uid://bev6du6da6a5b" path="res://scenes/levels/level10.tscn" id="2_2fd1p"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_qjmml"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_nrm43"]
+[ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="5_pkwtb"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="6_iqtpt"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="7_bep1h"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="background2" parent="." instance=ExtResource("1_t0o46")]
+offset_right = 2000.0
+offset_bottom = 2000.0
+
+[node name="Level10" parent="." instance=ExtResource("2_2fd1p")]
+
+[node name="player1" parent="." instance=ExtResource("3_qjmml")]
+position = Vector2(1707, 842)
+
+[node name="player2" parent="." instance=ExtResource("4_nrm43")]
+position = Vector2(134, 873)
+
+[node name="floaty_box" parent="." instance=ExtResource("5_pkwtb")]
+position = Vector2(1862, 829)
+
+[node name="floaty_box2" parent="." instance=ExtResource("5_pkwtb")]
+position = Vector2(1861, 756)
+
+[node name="floaty_box3" parent="." instance=ExtResource("5_pkwtb")]
+position = Vector2(1635, 713)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("6_iqtpt")]
+position = Vector2(1570, 1028)
+scale = Vector2(2, 2)
+
+[node name="ExitDoor2" parent="." instance=ExtResource("7_bep1h")]
+position = Vector2(1494, 1028)
+scale = Vector2(2, 2)
+
+[node name="floaty_box4" parent="." instance=ExtResource("5_pkwtb")]
+position = Vector2(1862, 655)
+
+[node name="floaty_box5" parent="." instance=ExtResource("5_pkwtb")]
+position = Vector2(1859, 564)

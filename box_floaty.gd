@@ -16,14 +16,13 @@ func _ready():
 
 
 func _physics_process(delta):
-	#if !is_on_floor():
-		velocity.y += GRAVITY *delta
-		move_and_slide()
+	velocity.y += GRAVITY * 0.04
+	move_and_slide()
 
 
 
-func pull(position: Vector2):
-	var pulled_to = (position - global_position).normalized()
+func pull(posi: Vector2):
+	var pulled_to = (posi - global_position).normalized()
 	velocity = pulled_to * magnet_power
 
 	move_and_slide()

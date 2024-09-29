@@ -1,0 +1,58 @@
+[gd_scene load_steps=10 format=3 uid="uid://cpjyryel26m8i"]
+
+[ext_resource type="PackedScene" uid="uid://cuorkwl6g7iue" path="res://scenes/levels/level11.tscn" id="1_015cd"]
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="2_6myyy"]
+[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="3_43p5v"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_dtt8q"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="5_t4a0d"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="6_75it1"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="7_5ga03"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="8_ks06s"]
+[ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="9_5mx6b"]
+
+[node name="play_level_4" type="Node2D"]
+
+[node name="background2" parent="." instance=ExtResource("2_6myyy")]
+offset_left = -157.0
+offset_top = -76.0
+offset_right = 2200.0
+offset_bottom = 1180.0
+metadata/_edit_use_anchors_ = true
+
+[node name="back_button" parent="." instance=ExtResource("3_43p5v")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 42.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="player1" parent="." instance=ExtResource("4_dtt8q")]
+position = Vector2(1764, 957)
+
+[node name="player2" parent="." instance=ExtResource("5_t4a0d")]
+position = Vector2(1849, 957)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("6_75it1")]
+position = Vector2(293, 211)
+scale = Vector2(2, 2)
+stage = 6
+
+[node name="ExitDoor2" parent="." instance=ExtResource("7_5ga03")]
+position = Vector2(1843, 210)
+scale = Vector2(2, 2)
+stage = 6
+
+[node name="Level3" parent="." instance=ExtResource("1_015cd")]
+
+[node name="Box3" parent="." instance=ExtResource("8_ks06s")]
+position = Vector2(1839, 462)
+
+[node name="floaty_box" parent="." instance=ExtResource("9_5mx6b")]
+position = Vector2(503, 792)
