@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://pvlift5fvgf3"]
 
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_1cbuv"]
 [ext_resource type="PackedScene" uid="uid://cc2o2bk7gc1y7" path="res://scenes/levels/level5.tscn" id="1_s081a"]
-[ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="2_8w5pf"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_u6fgn"]
 [ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="4_1a7f4"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_s6blb"]
@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_8ww2y"]
 
 [node name="PlayLevel5" type="Node2D"]
+
+[node name="background2" parent="." instance=ExtResource("1_1cbuv")]
+offset_right = 2000.0
+offset_bottom = 2000.0
 
 [node name="Level5" parent="." instance=ExtResource("1_s081a")]
 
@@ -46,5 +50,13 @@ position = Vector2(567, 978)
 [node name="Box6" parent="." instance=ExtResource("4_1a7f4")]
 position = Vector2(695, 985)
 
-[node name="floaty_box" parent="." instance=ExtResource("2_8w5pf")]
-position = Vector2(1266, 775)
+[node name="TextEdit2" type="TextEdit" parent="."]
+texture_filter = 2
+offset_left = 763.0
+offset_top = 542.0
+offset_right = 1095.0
+offset_bottom = 641.0
+theme_override_font_sizes/font_size = 22
+text = "Boxes are objects that can be 
+pushed, pulled, and stood on."
+editable = false
