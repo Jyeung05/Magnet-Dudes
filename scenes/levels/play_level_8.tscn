@@ -1,34 +1,91 @@
-[gd_scene load_steps=7 format=3 uid="uid://clm6nmbbn60my"]
+[gd_scene load_steps=9 format=3 uid="uid://clm6nmbbn60my"]
 
 [ext_resource type="PackedScene" uid="uid://bry13vifq7yl5" path="res://scenes/levels/level8.tscn" id="1_2xkwc"]
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_u0f6y"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_e4pmc"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_lkcw0"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="4_h765a"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="5_vnpa6"]
 [ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="6_w7mex"]
+[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="8_gjwco"]
 
 [node name="play_level_6" type="Node2D"]
 
+[node name="background2" parent="." instance=ExtResource("1_u0f6y")]
+offset_left = -157.0
+offset_top = -76.0
+offset_right = 2200.0
+offset_bottom = 1180.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextEdit4" type="TextEdit" parent="."]
+texture_filter = 2
+offset_left = 339.0
+offset_top = 298.0
+offset_right = 765.0
+offset_bottom = 386.0
+theme_override_font_sizes/font_size = 22
+text = "This is a ball. It acts like the box 
+but with a special property. It's floaty!"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+texture_filter = 2
+offset_left = 466.0
+offset_top = 405.0
+offset_right = 884.0
+offset_bottom = 451.0
+theme_override_font_sizes/font_size = 22
+text = "Try pushing the box down to red dude"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
 [node name="Level3" parent="." instance=ExtResource("1_2xkwc")]
-position = Vector2(11, -33)
 
 [node name="player1" parent="." instance=ExtResource("2_e4pmc")]
-position = Vector2(892, 605)
+position = Vector2(882, 624)
 collision_layer = 8
 
 [node name="player2" parent="." instance=ExtResource("3_lkcw0")]
-position = Vector2(141, 971)
+position = Vector2(148, 1011)
 collision_layer = 16
 
 [node name="ExitDoor1" parent="." instance=ExtResource("4_h765a")]
-position = Vector2(974, 635)
+position = Vector2(995, 672)
 scale = Vector2(2, 2)
 stage = 7
 
 [node name="ExitDoor2" parent="." instance=ExtResource("5_vnpa6")]
-position = Vector2(861, 1051)
+position = Vector2(810, 1087)
 scale = Vector2(2, 2)
 stage = 7
 
 [node name="floaty_box" parent="." instance=ExtResource("6_w7mex")]
-position = Vector2(797, 540)
+position = Vector2(791, 568)
+
+[node name="back_button" parent="." instance=ExtResource("8_gjwco")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 42.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true

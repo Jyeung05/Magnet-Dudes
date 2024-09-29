@@ -32,22 +32,22 @@ func _process(delta):
 			get_tree().change_scene_to_file("res://scenes/levels/play_level_8.tscn")
 			Completed.lvl7completed = true
 		if stage == 7:
-			get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/play_level_9.tscn")
 			Completed.lvl8completed = true
 		if stage == 8:
-			get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/play_level_10.tscn")
 			Completed.lvl9completed = true
 		if stage == 9:
-			get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/play_level_11.tscn")
 			Completed.lvl10completed = true
 		if stage == 10:
-			get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
+			get_tree().change_scene_to_file("res://scenes/levels/play_level_12.tscn")
 			Completed.lvl11completed = true
-		if stage == 11:
-			get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
-			Completed.lvl1completed = true
-		if stage == 12:
-			get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
+		#if stage == 11:
+			#get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
+			#Completed.lvl1completed = true
+		#if stage == 12:
+			#get_tree().change_scene_to_file("res://scenes/levels/play_level_1.tscn")
 
 
 

@@ -49,6 +49,13 @@ text = "Right click to active your magnet
 Left click to change push/pull mode
 This time try pushing one of the dudes over"
 editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 metadata/_edit_use_anchors_ = true
 
 [node name="ExitDoor1" parent="." instance=ExtResource("6_m0cxq")]

@@ -32,23 +32,41 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 metadata/_edit_use_anchors_ = true
 
+[node name="TextEdit3" type="TextEdit" parent="."]
+texture_filter = 2
+offset_left = 786.0
+offset_top = 36.0
+offset_right = 1126.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 22
+text = "Hint: use the box to help blue 
+dude over"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
+
 [node name="player1" parent="." instance=ExtResource("4_3ahda")]
-position = Vector2(1599, 400)
+position = Vector2(243, 1026)
 
 [node name="player2" parent="." instance=ExtResource("5_lnpm5")]
-position = Vector2(737, 607)
+position = Vector2(83, 1025)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("6_3skof")]
 position = Vector2(174, 302)
 scale = Vector2(2, 2)
-stage = 3
+stage = 8
 
 [node name="ExitDoor2" parent="." instance=ExtResource("7_68tp4")]
 position = Vector2(62, 306)
 scale = Vector2(2, 2)
-stage = 3
+stage = 8
 
 [node name="Level9" parent="." instance=ExtResource("1_ha0su")]
 
 [node name="Box" parent="." instance=ExtResource("8_d0yaa")]
-position = Vector2(1599, 477)
+position = Vector2(1149, 481)
