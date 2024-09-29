@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://0qguxbh30vcd"]
+
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_vimyo"]
+[ext_resource type="PackedScene" uid="uid://3fcvjwx8rq8" path="res://scenes/levels/level3.tscn" id="2_u7fq8"]
+[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_w5nco"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_ledqa"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_hicdg"]
+
+[node name="play_level_3" type="Node2D"]
+
+[node name="background2" parent="." instance=ExtResource("1_vimyo")]
+offset_left = -157.0
+offset_top = -76.0
+offset_right = 2200.0
+offset_bottom = 1180.0
+
+[node name="back_button" parent="." instance=ExtResource("2_w5nco")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 42.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="Level2" parent="." instance=ExtResource("2_u7fq8")]
+
+[node name="player1" parent="." instance=ExtResource("3_ledqa")]
+position = Vector2(649, 637)
+
+[node name="player2" parent="." instance=ExtResource("4_hicdg")]
+position = Vector2(356, 645)

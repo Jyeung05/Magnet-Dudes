@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://bggj1mt6lj2nt"]
+[gd_scene load_steps=8 format=3 uid="uid://bggj1mt6lj2nt"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_fbl7o"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_add8m"]
 [ext_resource type="PackedScene" uid="uid://f5uebf6qf0ma" path="res://scenes/levels/level2.tscn" id="3_je2tt"]
+[ext_resource type="PackedScene" path="res://scenes/exit_door_2.tscn" id="4_55i15"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_vye7o"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="5_57051"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_ua6ra"]
 
 [node name="play_level_2" type="Node2D"]
 
@@ -34,8 +36,28 @@ size_flags_vertical = 0
 
 [node name="Level" parent="." instance=ExtResource("3_je2tt")]
 
+[node name="ExitDoor2" parent="." instance=ExtResource("4_55i15")]
+position = Vector2(1732, 758)
+scale = Vector2(2, 2)
+stage = 1
+
+[node name="ExitDoor1" parent="." instance=ExtResource("5_ua6ra")]
+position = Vector2(1536, 753)
+scale = Vector2(3, 3)
+stage = 1
+
 [node name="player1" parent="." instance=ExtResource("4_vye7o")]
-position = Vector2(1526, 643)
+position = Vector2(1298, 683)
 
 [node name="player2" parent="." instance=ExtResource("5_57051")]
 position = Vector2(372, 673)
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 736.0
+offset_top = 427.0
+offset_right = 1149.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 22
+text = "Right click to active your magnet
+Left click to change push/pull mode
+Try pulling the red dude over"

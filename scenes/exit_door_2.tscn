@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2i6wvy6t3ef0"]
+[gd_scene load_steps=5 format=3 uid="uid://df0734kckkaa6"]
 
 [ext_resource type="Script" path="res://exit_door_2.gd" id="1_l5nmm"]
 [ext_resource type="AudioStream" uid="uid://deg3ot8bnxjd3" path="res://assets/coin-collect-retro-8-bit-sound-effect-145251.mp3" id="2_504xb"]

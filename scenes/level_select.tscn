@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://ekvaqsofj0st"]
+[gd_scene load_steps=7 format=3 uid="uid://ekvaqsofj0st"]
 
 [ext_resource type="Texture2D" uid="uid://cd4r7ny64xvf7" path="res://assets/back.png" id="1_7lepl"]
 [ext_resource type="Script" path="res://scenes/level_select.gd" id="1_bfjx7"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_xbres"]
 [ext_resource type="Texture2D" uid="uid://d1n3oxjllb7fy" path="res://assets/lvl select.png" id="2_r8vrr"]
 [ext_resource type="AudioStream" uid="uid://deg3ot8bnxjd3" path="res://assets/coin-collect-retro-8-bit-sound-effect-145251.mp3" id="5_ftlvk"]
+[ext_resource type="Texture2D" uid="uid://bbwtro6thngex" path="res://assets/X.png" id="6_4hgeq"]
 
 [node name="level_select" type="Control"]
 layout_mode = 3
@@ -17,6 +18,10 @@ script = ExtResource("1_bfjx7")
 
 [node name="background2" parent="." instance=ExtResource("1_xbres")]
 layout_mode = 1
+offset_left = -21.0
+offset_top = -17.0
+offset_right = 59.0
+offset_bottom = 45.0
 
 [node name="back" type="TextureRect" parent="."]
 texture_filter = 1
@@ -44,7 +49,13 @@ offset_top = 52.0
 offset_right = 132.0
 offset_bottom = 139.0
 
-[node name="lvl1" type="Button" parent="."]
+[node name="buttons" type="Control" parent="."]
+show_behind_parent = true
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="lvl1" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 275.0
@@ -52,7 +63,7 @@ offset_top = 269.0
 offset_right = 409.0
 offset_bottom = 443.0
 
-[node name="lvl2" type="Button" parent="."]
+[node name="lvl2" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 509.0
@@ -60,7 +71,7 @@ offset_top = 245.0
 offset_right = 657.0
 offset_bottom = 465.0
 
-[node name="lvl3" type="Button" parent="."]
+[node name="lvl3" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 759.0
@@ -68,7 +79,7 @@ offset_top = 255.0
 offset_right = 903.0
 offset_bottom = 430.0
 
-[node name="lvl4" type="Button" parent="."]
+[node name="lvl4" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 1012.0
@@ -76,7 +87,7 @@ offset_top = 255.0
 offset_right = 1161.0
 offset_bottom = 444.0
 
-[node name="lvl5" type="Button" parent="."]
+[node name="lvl5" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 1
 anchors_preset = -1
@@ -84,12 +95,12 @@ anchor_left = 0.019
 anchor_top = 0.083
 anchor_right = 0.019
 anchor_bottom = 0.083
-offset_left = 1213.52
-offset_top = 157.36
-offset_right = 1364.52
-offset_bottom = 354.36
+offset_left = 1249.24
+offset_top = 243.68
+offset_right = 1400.24
+offset_bottom = 440.68
 
-[node name="lvl6" type="Button" parent="."]
+[node name="lvl6" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 1509.0
@@ -97,7 +108,7 @@ offset_top = 247.0
 offset_right = 1673.0
 offset_bottom = 430.0
 
-[node name="lvl7" type="Button" parent="."]
+[node name="lvl7" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 285.0
@@ -105,7 +116,7 @@ offset_top = 576.0
 offset_right = 415.0
 offset_bottom = 779.0
 
-[node name="lvl8" type="Button" parent="."]
+[node name="lvl8" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 518.0
@@ -113,7 +124,7 @@ offset_top = 541.0
 offset_right = 656.0
 offset_bottom = 775.0
 
-[node name="lvl9" type="Button" parent="."]
+[node name="lvl9" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 770.0
@@ -121,7 +132,7 @@ offset_top = 583.0
 offset_right = 918.0
 offset_bottom = 779.0
 
-[node name="lvl10" type="Button" parent="."]
+[node name="lvl10" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 1009.0
@@ -129,7 +140,7 @@ offset_top = 586.0
 offset_right = 1164.0
 offset_bottom = 779.0
 
-[node name="lvl11" type="Button" parent="."]
+[node name="lvl11" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 1255.0
@@ -137,7 +148,7 @@ offset_top = 563.0
 offset_right = 1427.0
 offset_bottom = 761.0
 
-[node name="lvl12" type="Button" parent="."]
+[node name="lvl12" type="Button" parent="buttons"]
 show_behind_parent = true
 layout_mode = 0
 offset_left = 1531.0
@@ -148,16 +159,115 @@ offset_bottom = 775.0
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_ftlvk")
 
+[node name="x" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 449.0
+offset_top = 216.0
+offset_right = 716.0
+offset_bottom = 512.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x2" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 721.0
+offset_top = 224.0
+offset_right = 954.0
+offset_bottom = 494.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x3" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 978.0
+offset_top = 216.0
+offset_right = 1202.0
+offset_bottom = 478.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x4" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1208.0
+offset_top = 216.0
+offset_right = 1458.0
+offset_bottom = 493.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x5" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1455.0
+offset_top = 203.0
+offset_right = 1711.0
+offset_bottom = 488.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x6" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 217.0
+offset_top = 552.0
+offset_right = 452.0
+offset_bottom = 825.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x7" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 478.0
+offset_top = 547.0
+offset_right = 692.0
+offset_bottom = 824.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x8" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 715.0
+offset_top = 547.0
+offset_right = 950.0
+offset_bottom = 837.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x9" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 955.0
+offset_top = 543.0
+offset_right = 1207.0
+offset_bottom = 839.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x10" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1206.0
+offset_top = 529.0
+offset_right = 1458.0
+offset_bottom = 814.0
+texture = ExtResource("6_4hgeq")
+
+[node name="x11" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 1466.0
+offset_top = 533.0
+offset_right = 1733.0
+offset_bottom = 829.0
+texture = ExtResource("6_4hgeq")
+
 [connection signal="pressed" from="back2" to="." method="_on_back_2_pressed"]
-[connection signal="pressed" from="lvl1" to="." method="_on_lvl_1_pressed"]
-[connection signal="pressed" from="lvl2" to="." method="_on_lvl_2_pressed"]
-[connection signal="pressed" from="lvl3" to="." method="_on_lvl_3_pressed"]
-[connection signal="pressed" from="lvl4" to="." method="_on_lvl_4_pressed"]
-[connection signal="pressed" from="lvl5" to="." method="_on_lvl_5_pressed"]
-[connection signal="pressed" from="lvl6" to="." method="_on_lvl_6_pressed"]
-[connection signal="pressed" from="lvl7" to="." method="_on_lvl_7_pressed"]
-[connection signal="pressed" from="lvl8" to="." method="_on_lvl_8_pressed"]
-[connection signal="pressed" from="lvl9" to="." method="_on_lvl_9_pressed"]
-[connection signal="pressed" from="lvl10" to="." method="_on_lvl_10_pressed"]
-[connection signal="pressed" from="lvl11" to="." method="_on_lvl_11_pressed"]
-[connection signal="pressed" from="lvl12" to="." method="_on_lvl_12_pressed"]
+[connection signal="pressed" from="buttons/lvl1" to="." method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="buttons/lvl2" to="." method="_on_lvl_2_pressed"]
+[connection signal="pressed" from="buttons/lvl3" to="." method="_on_lvl_3_pressed"]
+[connection signal="pressed" from="buttons/lvl4" to="." method="_on_lvl_4_pressed"]
+[connection signal="pressed" from="buttons/lvl5" to="." method="_on_lvl_5_pressed"]
+[connection signal="pressed" from="buttons/lvl6" to="." method="_on_lvl_6_pressed"]
+[connection signal="pressed" from="buttons/lvl7" to="." method="_on_lvl_7_pressed"]
+[connection signal="pressed" from="buttons/lvl8" to="." method="_on_lvl_8_pressed"]
+[connection signal="pressed" from="buttons/lvl9" to="." method="_on_lvl_9_pressed"]
+[connection signal="pressed" from="buttons/lvl10" to="." method="_on_lvl_10_pressed"]
+[connection signal="pressed" from="buttons/lvl11" to="." method="_on_lvl_11_pressed"]
+[connection signal="pressed" from="buttons/lvl12" to="." method="_on_lvl_12_pressed"]
