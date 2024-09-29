@@ -1,13 +1,18 @@
 [gd_scene load_steps=3 format=3 uid="uid://bkmucuwys7u3p"]
 
 [ext_resource type="Script" path="res://magnet.gd" id="1_8fjof"]
-[ext_resource type="Texture2D" uid="uid://bsm7hisfnisie" path="res://icon.svg" id="1_cdmtq"]
+[ext_resource type="Texture2D" uid="uid://ccxi53k3337pe" path="res://assets/magnet.png" id="2_8nhds"]
 
-[node name="magnet" type="Sprite2D"]
+[node name="magnet" type="Node2D"]
+texture_filter = 1
 scale = Vector2(0.993172, 1)
-texture = ExtResource("1_cdmtq")
 script = ExtResource("1_8fjof")
 distance = 500.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(3, 3)
+texture = ExtResource("2_8nhds")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 rotation = -2.35619

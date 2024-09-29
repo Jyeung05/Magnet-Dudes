@@ -1,7 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cgjjot70kucx0"]
+[gd_scene load_steps=4 format=3 uid="uid://cgjjot70kucx0"]
 
 [ext_resource type="Script" path="res://ExitDoor1.gd" id="1_6ae8e"]
-[ext_resource type="AudioStream" uid="uid://deg3ot8bnxjd3" path="res://assets/coin-collect-retro-8-bit-sound-effect-145251.mp3" id="2_oxycq"]
 [ext_resource type="Texture2D" uid="uid://cwrliscrtvq3a" path="res://assets/blue door.png" id="2_ytbna"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dil28"]
@@ -9,22 +8,19 @@ size = Vector2(29, 44.5)
 
 [node name="ExitDoor1" type="Node2D"]
 script = ExtResource("1_6ae8e")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_oxycq")
+stage = null
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 0
-collision_mask = 16
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -22.25)
 shape = SubResource("RectangleShape2D_dil28")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(8.9407e-07, -22.5)
-scale = Vector2(0.46875, 0.703125)
+position = Vector2(0, -33)
 texture = ExtResource("2_ytbna")
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Node2D
 @onready var ray_casts = [$RayCast2D, $RayCast2D2, $RayCast2D3, $RayCast2D4, $RayCast2D5 ]
 @export var distance: float = 256.0
 

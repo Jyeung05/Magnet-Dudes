@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2i6wvy6t3ef0"]
+
+[ext_resource type="Script" path="res://exit_door_2.gd" id="1_l5nmm"]
+[ext_resource type="AudioStream" uid="uid://deg3ot8bnxjd3" path="res://assets/coin-collect-retro-8-bit-sound-effect-145251.mp3" id="2_504xb"]
+[ext_resource type="Texture2D" uid="uid://b7mn1s2vb3fdb" path="res://assets/red door.png" id="2_osva7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h428u"]
+size = Vector2(29, 44.5)
+
+[node name="ExitDoor2" type="Node2D"]
+script = ExtResource("1_l5nmm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_504xb")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -22.25)
+shape = SubResource("RectangleShape2D_h428u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -33)
+texture = ExtResource("2_osva7")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
