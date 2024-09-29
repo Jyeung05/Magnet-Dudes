@@ -16,9 +16,9 @@ func _ready():
 
 
 func _physics_process(delta):
-	if !is_on_floor():
-		velocity.y += GRAVITY *delta
-		move_and_slide()
+
+	velocity.y += GRAVITY *delta
+	move_and_slide()
 
 
 
