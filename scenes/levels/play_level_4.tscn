@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cvsw2b73p50y0"]
+[gd_scene load_steps=9 format=3 uid="uid://cvsw2b73p50y0"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_7jdfe"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_jg5w6"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_2xqug"]
+[ext_resource type="PackedScene" uid="uid://e277ekr8y0q4" path="res://restart_button.tscn" id="3_vg5j3"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_2qw81"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_1rnai"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_pf3pc"]
@@ -30,6 +31,12 @@ grow_vertical = 1
 size_flags_horizontal = 0
 size_flags_vertical = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="restart_button" parent="." instance=ExtResource("3_vg5j3")]
+offset_left = 171.0
+offset_top = 41.0
+offset_right = 171.0
+offset_bottom = 41.0
 
 [node name="player1" parent="." instance=ExtResource("3_2xqug")]
 position = Vector2(1455, 1005)

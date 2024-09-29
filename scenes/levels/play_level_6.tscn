@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dqbyfpxpmr0md"]
+[gd_scene load_steps=10 format=3 uid="uid://c8ykmxablj8yd"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_0kq5v"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_vyknb"]
@@ -6,8 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_4cehg"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_jf2oa"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_382m5"]
-[ext_resource type="PackedScene" uid="uid://q7s7q1ri6r8y" path="res://scenes/levels/level6.tscn" id="7_pcfdd"]
-[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="8_rvhsc"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level6.tscn" id="7_pcfdd"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="8_rvhsc"]
+[ext_resource type="PackedScene" uid="uid://e277ekr8y0q4" path="res://restart_button.tscn" id="9_3nlga"]
 
 [node name="play_level_4" type="Node2D"]
 
@@ -85,3 +86,9 @@ position = Vector2(1258, 861)
 
 [node name="Box" parent="." instance=ExtResource("8_rvhsc")]
 position = Vector2(1258, 751)
+
+[node name="restart_button" parent="." instance=ExtResource("9_3nlga")]
+offset_left = 171.0
+offset_top = 39.0
+offset_right = 171.0
+offset_bottom = 39.0

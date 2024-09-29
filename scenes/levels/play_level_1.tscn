@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dls7n18ds8epk"]
+[gd_scene load_steps=9 format=3 uid="uid://dls7n18ds8epk"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_s27on"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_dit8j"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dx2qi7wkfwkxj" path="res://scenes/levels/level_1.tscn" id="4_i5fw3"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="5_3t0id"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_c43dp"]
+[ext_resource type="PackedScene" uid="uid://e277ekr8y0q4" path="res://restart_button.tscn" id="8_1srva"]
 
 [node name="level1" type="Node2D"]
 
@@ -99,3 +100,9 @@ position = Vector2(187, 612)
 [node name="player2" parent="." instance=ExtResource("3_kk2l6")]
 position = Vector2(428, 651)
 collision_layer = 40
+
+[node name="restart_button" parent="." instance=ExtResource("8_1srva")]
+offset_left = 151.0
+offset_top = 20.0
+offset_right = 151.0
+offset_bottom = 20.0

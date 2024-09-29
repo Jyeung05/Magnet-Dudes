@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://clm6nmbbn60my"]
+[gd_scene load_steps=10 format=3 uid="uid://cltntge7hg645"]
 
-[ext_resource type="PackedScene" uid="uid://bry13vifq7yl5" path="res://scenes/levels/level8.tscn" id="1_2xkwc"]
+[ext_resource type="PackedScene" path="res://scenes/levels/level8.tscn" id="1_2xkwc"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_u0f6y"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_e4pmc"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_lkcw0"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="5_vnpa6"]
 [ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="6_w7mex"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="8_gjwco"]
+[ext_resource type="PackedScene" uid="uid://e277ekr8y0q4" path="res://restart_button.tscn" id="9_1h1u5"]
 
 [node name="play_level_6" type="Node2D"]
 
@@ -89,3 +90,9 @@ grow_vertical = 1
 size_flags_horizontal = 0
 size_flags_vertical = 0
 metadata/_edit_use_anchors_ = true
+
+[node name="restart_button" parent="." instance=ExtResource("9_1h1u5")]
+offset_left = 172.0
+offset_top = 40.0
+offset_right = 172.0
+offset_bottom = 40.0

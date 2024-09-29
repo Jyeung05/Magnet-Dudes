@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bggj1mt6lj2nt"]
+[gd_scene load_steps=9 format=3 uid="uid://bggj1mt6lj2nt"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_fbl7o"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_add8m"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_vye7o"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="5_57051"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_ua6ra"]
+[ext_resource type="PackedScene" uid="uid://e277ekr8y0q4" path="res://restart_button.tscn" id="8_3ka2s"]
 
 [node name="play_level_2" type="Node2D"]
 
@@ -69,3 +70,9 @@ deselect_on_focus_loss_enabled = false
 drag_and_drop_selection_enabled = false
 virtual_keyboard_enabled = false
 middle_mouse_paste_enabled = false
+
+[node name="restart_button" parent="." instance=ExtResource("8_3ka2s")]
+offset_left = 182.0
+offset_top = 42.0
+offset_right = 182.0
+offset_bottom = 42.0

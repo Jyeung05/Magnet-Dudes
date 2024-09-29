@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dyc04omjti6ch"]
+[gd_scene load_steps=10 format=3 uid="uid://dyc04omjti6ch"]
 
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_io1a2"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_vnhj2"]
@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_150ny"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_eukn8"]
 [ext_resource type="PackedScene" uid="uid://c4d5wbr86d4wl" path="res://scenes/levels/level7.tscn" id="7_aa1bj"]
-[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="8_knunb"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="8_knunb"]
+[ext_resource type="PackedScene" uid="uid://e277ekr8y0q4" path="res://restart_button.tscn" id="9_1tfg3"]
 
 [node name="play_level_4" type="Node2D"]
 
@@ -76,3 +77,9 @@ position = Vector2(278, 363)
 
 [node name="Box3" parent="." instance=ExtResource("8_knunb")]
 position = Vector2(398, 362)
+
+[node name="restart_button" parent="." instance=ExtResource("9_1tfg3")]
+offset_left = 186.0
+offset_top = 42.0
+offset_right = 186.0
+offset_bottom = 42.0
