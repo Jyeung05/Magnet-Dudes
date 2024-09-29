@@ -74,7 +74,7 @@ func pull(position: Vector2):
 func push(posi: Vector2):
 	
 	var push_to = (posi - global_position).normalized() * -1
-	velocity = push_to * magnet_power
+	velocity = push_to * magnet_power * 2
 	move_and_slide()
 
 func die():

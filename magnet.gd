@@ -29,7 +29,7 @@ func interpolate(height, duration):
 
 func _input(event):
 	if control.player1:
-		if event.is_action_pressed("mag"):
+		if event.is_action_pressed("mag") || event.is_action_pressed("track_pad_mag"):
 			await get_tree().create_timer(0.5).timeout
 			if(self.is_pull):
 				self.is_pull = false
@@ -41,7 +41,7 @@ func _input(event):
 				self.is_pull = true
 				$"../../../MagWave/Pull".visible = self.is_pull
 				$"../../../MagWave/Push".visible = self.is_push
-		if event.is_action_pressed("on_off"):
+		if event.is_action_pressed("on_off") || event.is_action_pressed("track_pad_on"):
 			self.on_off = !self.on_off
 			$"../../../MagWave".visible = self.on_off
 	
