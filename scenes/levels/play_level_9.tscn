@@ -1,13 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://bifqjnn3ybbxg"]
+[gd_scene load_steps=9 format=3 uid="uid://clm6nmbbn60my"]
 
-[ext_resource type="PackedScene" uid="uid://duw7fouv7ex15" path="res://scenes/levels/level9.tscn" id="1_ha0su"]
+[ext_resource type="PackedScene" uid="uid://bry13vifq7yl5" path="res://scenes/levels/level9.tscn" id="1_ha0su"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="2_75b3m"]
 [ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="3_tpif0"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_3ahda"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="5_lnpm5"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="6_3skof"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="7_68tp4"]
-[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="8_d0yaa"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="8_d0yaa"]
 
 [node name="play_level_9" type="Node2D"]
 
