@@ -10,7 +10,9 @@ var is_push = false;
 var on_off = false;
 
 func _ready():
-	pass
+	$"../../../MagWave".visible = self.on_off
+	$"../../../MagWave/Pull".visible = self.is_pull
+	$"../../../MagWave/Push".visible = self.is_push
 
 
 func _process(_delta):
@@ -29,8 +31,8 @@ func interpolate(height, duration):
 
 func _input(event):
 	if control.player1:
-		if event.is_action_pressed("mag"):
-			await get_tree().create_timer(0.5).timeout
+		if event.is_action_pressed("mag") || event.is_action_pressed("track_pad_mag"):
+			await get_tree().create_timer(0.2).timeout
 			if(self.is_pull):
 				self.is_pull = false
 				self.is_push = true
@@ -41,7 +43,7 @@ func _input(event):
 				self.is_pull = true
 				$"../../../MagWave/Pull".visible = self.is_pull
 				$"../../../MagWave/Push".visible = self.is_push
-		if event.is_action_pressed("on_off"):
+		if event.is_action_pressed("on_off") || event.is_action_pressed("track_pad_on"):
 			self.on_off = !self.on_off
 			$"../../../MagWave".visible = self.on_off
 	
@@ -63,13 +65,14 @@ func magnet():
 	
 	for i in range(0,5):
 		if ray_casts[i].is_colliding():
-			var my_pos = get_global_position()
-			collision_point = ray_casts[i].get_collider()
-			if self.is_pull:
-				collision_point.pull(my_pos)
-			else:
-				
-				collision_point.push(my_pos)
+			if ray_casts[i].get_collider() != $"../../..":
+				var my_pos = get_global_position()
+				collision_point = ray_casts[i].get_collider()
+				if self.is_pull:
+					collision_point.pull(my_pos)
+				else:
+					
+					collision_point.push(my_pos)
 				
 
 

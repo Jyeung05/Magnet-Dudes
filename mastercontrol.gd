@@ -2,9 +2,13 @@ extends CharacterBody2D
 class_name MasterControl
 static var player1 = true
 @export var GRAVITY = 150
+@export var  push_multiplier = 2
 
 func _ready():
 	player1 = true
+	GRAVITY = 150
+	push_multiplier = 2
+	velocity = Vector2(0,0)
 	
 func _process(delta):
 	

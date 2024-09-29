@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c1x2qhmk57cxx"]
+[gd_scene load_steps=16 format=3 uid="uid://c1x2qhmk57cxx"]
 
 [ext_resource type="Script" path="res://player1.gd" id="1_2kw6b"]
 [ext_resource type="Texture2D" uid="uid://ddbgmo6cet2hl" path="res://assets/blue guy.png" id="2_5ykrd"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_gufso"]
 [ext_resource type="Texture2D" uid="uid://3ph7alc870k2" path="res://assets/movingNeg.png" id="4_heab1"]
 [ext_resource type="Texture2D" uid="uid://py5tp3ba08iq" path="res://assets/magnetPull.png" id="5_c6x2e"]
+[ext_resource type="Script" path="res://scenes/pull_wave_UI.gd" id="5_j4abr"]
 [ext_resource type="Script" path="res://pivot.gd" id="5_ya33p"]
 [ext_resource type="AudioStream" uid="uid://c1lfext148qoa" path="res://assets/sfx_jump_07-80241.mp3" id="7_widj3"]
 [ext_resource type="Script" path="res://scenes/push_wave_UI.gd" id="8_cto5i"]
@@ -24,6 +25,8 @@ size = Vector2(126, 102)
 
 [node name="player_1" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
+collision_layer = 16
+collision_mask = 3
 script = ExtResource("1_2kw6b")
 jump_height = 500.0
 jump_time_to_peak = 0.5
@@ -57,10 +60,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D3/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.1
-anchor_top = -0.65
-anchor_right = -0.1
-anchor_bottom = -0.65
+anchor_left = -2.6
+anchor_top = -0.8
+anchor_right = -2.6
+anchor_bottom = -0.8
 offset_left = 316.0
 offset_top = -288.0
 offset_right = 436.0
@@ -81,10 +84,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D2/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = -0.8
-anchor_right = 0.05
-anchor_bottom = -0.8
+anchor_left = -1.65
+anchor_top = -0.65
+anchor_right = -1.65
+anchor_bottom = -0.65
 offset_left = 316.0
 offset_top = -288.0
 offset_right = 436.0
@@ -106,10 +109,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="MagWave/Push/Sprite2D/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.671429
-anchor_top = -0.657143
-anchor_right = 0.671429
-anchor_bottom = -0.657143
+anchor_left = -1.82857
+anchor_top = -0.8
+anchor_right = -1.82857
+anchor_bottom = -0.8
 offset_left = 316.0
 offset_top = -288.0
 offset_right = 436.0
@@ -122,7 +125,7 @@ visible = false
 
 [node name="Sprite2D3" type="Sprite2D" parent="MagWave/Pull"]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("8_cto5i")
+script = ExtResource("5_j4abr")
 
 [node name="Control" type="Control" parent="MagWave/Pull/Sprite2D3"]
 layout_mode = 3
@@ -134,10 +137,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D3/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = -0.1
-anchor_top = -0.65
-anchor_right = -0.1
-anchor_bottom = -0.65
+anchor_left = 2.0
+anchor_top = -1.0
+anchor_right = 2.0
+anchor_bottom = -1.0
 offset_left = 316.0
 offset_top = -288.0
 offset_right = 436.0
@@ -146,7 +149,7 @@ texture = ExtResource("5_c6x2e")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="MagWave/Pull"]
-script = ExtResource("8_cto5i")
+script = ExtResource("5_j4abr")
 
 [node name="Control" type="Control" parent="MagWave/Pull/Sprite2D2"]
 layout_mode = 3
@@ -158,10 +161,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D2/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.05
-anchor_top = -0.8
-anchor_right = 0.05
-anchor_bottom = -0.8
+anchor_left = 1.8
+anchor_top = -1.7
+anchor_right = 1.8
+anchor_bottom = -1.7
 offset_left = 316.0
 offset_top = -288.0
 offset_right = 436.0
@@ -171,7 +174,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="MagWave/Pull"]
 scale = Vector2(0.7, 0.7)
-script = ExtResource("8_cto5i")
+script = ExtResource("5_j4abr")
 
 [node name="Control" type="Control" parent="MagWave/Pull/Sprite2D"]
 layout_mode = 3
@@ -183,10 +186,10 @@ metadata/_edit_use_anchors_ = true
 [node name="TextureRect" type="TextureRect" parent="MagWave/Pull/Sprite2D/Control"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.671429
-anchor_top = -0.657143
-anchor_right = 0.671429
-anchor_bottom = -0.657143
+anchor_left = 2.17143
+anchor_top = -1.01429
+anchor_right = 2.17143
+anchor_bottom = -1.01429
 offset_left = 316.0
 offset_top = -288.0
 offset_right = 436.0
@@ -236,7 +239,7 @@ script = ExtResource("5_ya33p")
 
 [node name="magnet" parent="MainNode/pivot" instance=ExtResource("4_gufso")]
 process_physics_priority = 1
-position = Vector2(3.8147e-06, 9.53674e-07)
+position = Vector2(1.13687e-13, -4.23516e-22)
 offset = Vector2(100, 0)
 
 [node name="pivotTimer" type="Timer" parent="MainNode/pivot"]
