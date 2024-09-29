@@ -9,10 +9,15 @@
 [node name="play_level_2" type="Node2D"]
 
 [node name="background2" parent="." instance=ExtResource("1_fbl7o")]
-offset_left = 1551.0
-offset_top = 667.0
-offset_right = 1551.0
-offset_bottom = 667.0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -1.0
+offset_top = -63.0
+offset_right = 2030.0
+offset_bottom = 1114.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="back_button" parent="." instance=ExtResource("2_add8m")]
 anchors_preset = 0
@@ -30,7 +35,7 @@ size_flags_vertical = 0
 [node name="Level" parent="." instance=ExtResource("3_je2tt")]
 
 [node name="player1" parent="." instance=ExtResource("4_vye7o")]
-position = Vector2(1551, 667)
+position = Vector2(1526, 643)
 
 [node name="player2" parent="." instance=ExtResource("5_57051")]
 position = Vector2(372, 673)
