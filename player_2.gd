@@ -81,7 +81,7 @@ func push(posi: Vector2):
 
 func die():
 	$ded.play()
-	await get_tree().create_timer(0.3).timeout
+	await get_tree().create_timer(0.32).timeout
 	get_tree().reload_current_scene()
 
 func _on_area_2d_body_entered(body):

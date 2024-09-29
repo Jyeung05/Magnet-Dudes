@@ -11,17 +11,11 @@
 [node name="level1" type="Node2D"]
 
 [node name="background" parent="." instance=ExtResource("1_s27on")]
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = -14545.0
-offset_top = -6529.0
-offset_right = 4212.0
-offset_bottom = 3980.0
-grow_horizontal = 1
-grow_vertical = 1
+offset_left = -157.0
+offset_top = -76.0
+offset_right = 2200.0
+offset_bottom = 1450.0
 rotation = 0.00165332
-metadata/_edit_use_anchors_ = true
 
 [node name="Level2" parent="." instance=ExtResource("4_i5fw3")]
 
@@ -45,7 +39,7 @@ offset_top = 327.0
 offset_right = 1142.0
 offset_bottom = 377.0
 theme_override_font_sizes/font_size = 22
-text = "Press E to change characters"
+text = "Press E to change dimensions"
 editable = false
 
 [node name="TextEdit" type="TextEdit" parent="."]

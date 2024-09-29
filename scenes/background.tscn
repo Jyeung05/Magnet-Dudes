@@ -1,10 +1,35 @@
-[gd_scene load_steps=8 format=3 uid="uid://dtq0kyda08ss"]
+[gd_scene load_steps=11 format=3 uid="uid://dtq0kyda08ss"]
 
 [ext_resource type="Script" path="res://background.gd" id="1_0enjb"]
+[ext_resource type="Shader" path="res://scenes/crt.gdshader" id="1_jvg1n"]
 [ext_resource type="Shader" path="res://blue.gdshader" id="1_k0r8x"]
 [ext_resource type="Texture2D" uid="uid://3ph7alc870k2" path="res://assets/movingNeg.png" id="2_w1vro"]
 [ext_resource type="Shader" path="res://red.gdshader" id="3_8ri6v"]
 [ext_resource type="Texture2D" uid="uid://0gieugg8ta8d" path="res://assets/movingPos.png" id="4_eyxy8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ucma"]
+shader = ExtResource("1_jvg1n")
+shader_parameter/overlay = false
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = true
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.05
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.06
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 1.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xrmdy"]
 shader = ExtResource("1_k0r8x")
@@ -14,7 +39,32 @@ shader_parameter/speed = 0.2
 shader = ExtResource("3_8ri6v")
 shader_parameter/speed = 0.2
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gigay"]
+shader = ExtResource("1_jvg1n")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.4
+shader_parameter/scanlines_width = 0.25
+shader_parameter/grille_opacity = 0.3
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = true
+shader_parameter/roll_speed = 8.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.113
+shader_parameter/distort_intensity = 0.012
+shader_parameter/noise_opacity = 0.064
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.051
+shader_parameter/aberration = 0.03
+shader_parameter/brightness = 1.4
+shader_parameter/discolor = true
+shader_parameter/warp_amount = 1.0
+shader_parameter/clip_warp = true
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.21
+
 [node name="background2" type="Control"]
+material = SubResource("ShaderMaterial_6ucma")
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,13 +74,17 @@ grow_vertical = 2
 script = ExtResource("1_0enjb")
 
 [node name="red" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -162.0
+offset_right = -288.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.3, 1.3)
 
 [node name="blue_neg" type="ColorRect" parent="red"]
 layout_mode = 1
@@ -53,13 +107,17 @@ texture = ExtResource("2_w1vro")
 stretch_mode = 1
 
 [node name="blue" type="Control" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -162.0
+offset_right = -288.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.3, 1.3)
 
 [node name="ColorRect" type="ColorRect" parent="blue"]
 layout_mode = 1
@@ -81,3 +139,25 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("4_eyxy8")
 stretch_mode = 1
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+material = SubResource("ShaderMaterial_gigay")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -288.0
+offset_top = -162.0
+offset_right = -288.0
+offset_bottom = -162.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.3, 1.3)
