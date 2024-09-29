@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6cmel5bkwmoq"]
+[gd_scene load_steps=9 format=3 uid="uid://daays54a4ka8b"]
 
-[ext_resource type="PackedScene" path="res://scenes/levels/level12.tscn" id="1_5awsc"]
+[ext_resource type="PackedScene" uid="uid://c14fqm0fd5gsj" path="res://scenes/levels/level12.tscn" id="1_5awsc"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_ypy5s"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_o4hkb"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_fngt1"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="4_1741w"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="5_28hji"]
 [ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="6_lidhu"]
+[ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="7_gd3dj"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -18,18 +19,56 @@ offset_bottom = 2000.0
 position = Vector2(1, -17)
 
 [node name="player1" parent="." instance=ExtResource("2_o4hkb")]
-position = Vector2(463, 618)
+position = Vector2(300, 962)
 
 [node name="player2" parent="." instance=ExtResource("3_fngt1")]
-position = Vector2(233, 989)
+position = Vector2(104, 963)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("4_1741w")]
-position = Vector2(62, 276)
+position = Vector2(1728, 129)
 scale = Vector2(2, 2)
+stage = 11
 
 [node name="ExitDoor2" parent="." instance=ExtResource("5_28hji")]
-position = Vector2(151, 273)
+position = Vector2(1847, 126)
 scale = Vector2(2, 2)
+stage = 11
+
+[node name="floaty_box" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(263, 172)
 
 [node name="Box" parent="." instance=ExtResource("6_lidhu")]
-position = Vector2(1622, 644)
+position = Vector2(1628, 637)
+
+[node name="floaty_box2" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(395, 199)
+
+[node name="floaty_box3" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(161, 163)
+
+[node name="floaty_box4" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(84, 218)
+
+[node name="floaty_box5" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(401, 70)
+
+[node name="floaty_box6" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(491, 183)
+
+[node name="floaty_box7" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(294, 99)
+
+[node name="floaty_box8" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(216, 52)
+
+[node name="floaty_box9" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(118, 81)
+
+[node name="floaty_box10" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(483, 106)
+
+[node name="floaty_box11" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(554, 147)
+
+[node name="floaty_box12" parent="." instance=ExtResource("7_gd3dj")]
+position = Vector2(359, 137)

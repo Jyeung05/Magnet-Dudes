@@ -111,4 +111,4 @@ func _on_lvl_12_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl11completed == true:
 		await get_tree().create_timer(0.1).timeout
-		get_tree().change_scene_to_file("res://scenes/play_level_11.tscn")
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_12.tscn")
