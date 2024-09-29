@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_7oeql"]
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="4_t1jh8"]
 [ext_resource type="PackedScene" uid="uid://cdepw516nm16b" path="res://scenes/levels/test_level.tscn" id="4_wj2ho"]
-[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="5_6sq5a"]
+[ext_resource type="PackedScene" path="res://back_button.tscn" id="5_6sq5a"]
 
 [node name="test_level" type="Node2D"]
 position = Vector2(575, 299)
@@ -20,10 +20,10 @@ offset_bottom = 6154.0
 grow_horizontal = 1
 grow_vertical = 1
 rotation = 0.00165332
+metadata/_edit_use_anchors_ = true
 
 [node name="player1" parent="." instance=ExtResource("2_m6lx5")]
 position = Vector2(529, 107)
-collision_layer = 16
 collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("3_7oeql")]
@@ -44,3 +44,4 @@ offset_right = -542.0
 offset_bottom = -262.0
 grow_horizontal = 1
 grow_vertical = 1
+metadata/_edit_use_anchors_ = true

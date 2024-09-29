@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player_2.gd" id="1_x8841"]
 [ext_resource type="Texture2D" uid="uid://d5fsxg84hfbh" path="res://assets/red guy.png" id="2_qgc03"]
-[ext_resource type="Script" path="res://scenes/push_wave_UI.gd" id="3_40fco"]
+[ext_resource type="Script" path="res://scenes/pull_wave_UI.gd" id="3_nwjsv"]
 [ext_resource type="Shader" path="res://red.gdshader" id="3_ysg83"]
 [ext_resource type="PackedScene" uid="uid://bkmucuwys7u3p" path="res://scenes/magnet.tscn" id="4_6ib81"]
 [ext_resource type="Texture2D" uid="uid://ths6dnm7qt7f" path="res://assets/magnetPush.png" id="4_inlsg"]
@@ -25,8 +25,8 @@ size = Vector2(126, 102.5)
 
 [node name="player2" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
-collision_layer = 0
-collision_mask = 0
+collision_layer = 8
+collision_mask = 5
 script = ExtResource("1_x8841")
 jump_height = 500.0
 jump_time_to_peak = 0.5
@@ -49,7 +49,7 @@ visible = false
 
 [node name="Sprite2D3" type="Sprite2D" parent="MagWave/Push"]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("3_40fco")
+script = ExtResource("3_nwjsv")
 
 [node name="Control" type="Control" parent="MagWave/Push/Sprite2D3"]
 layout_mode = 3
@@ -73,7 +73,7 @@ texture = ExtResource("4_inlsg")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="MagWave/Push"]
-script = ExtResource("3_40fco")
+script = ExtResource("3_nwjsv")
 
 [node name="Control" type="Control" parent="MagWave/Push/Sprite2D2"]
 layout_mode = 3
@@ -98,7 +98,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="MagWave/Push"]
 scale = Vector2(0.7, 0.7)
-script = ExtResource("3_40fco")
+script = ExtResource("3_nwjsv")
 
 [node name="Control" type="Control" parent="MagWave/Push/Sprite2D"]
 layout_mode = 3
@@ -126,7 +126,7 @@ visible = false
 
 [node name="Sprite2D3" type="Sprite2D" parent="MagWave/Pull"]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("3_40fco")
+script = ExtResource("3_nwjsv")
 
 [node name="Control" type="Control" parent="MagWave/Pull/Sprite2D3"]
 layout_mode = 3
@@ -150,7 +150,7 @@ texture = ExtResource("5_26orm")
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D2" type="Sprite2D" parent="MagWave/Pull"]
-script = ExtResource("3_40fco")
+script = ExtResource("3_nwjsv")
 
 [node name="Control" type="Control" parent="MagWave/Pull/Sprite2D2"]
 layout_mode = 3
@@ -175,7 +175,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="MagWave/Pull"]
 scale = Vector2(0.7, 0.7)
-script = ExtResource("3_40fco")
+script = ExtResource("3_nwjsv")
 
 [node name="Control" type="Control" parent="MagWave/Pull/Sprite2D"]
 layout_mode = 3

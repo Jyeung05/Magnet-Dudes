@@ -14,7 +14,6 @@ func _ready():
 	$"../../../MagWave/Pull".visible = self.is_pull
 	$"../../../MagWave/Push".visible = self.is_push
 
-
 func _process(_delta):
 
 	if(self.on_off):
@@ -66,13 +65,14 @@ func magnet():
 	
 	for i in range(0,5):
 		if ray_casts[i].is_colliding():
-			var my_pos = get_global_position()
-			collision_point = ray_casts[i].get_collider()
-			if self.is_pull:
-				collision_point.pull(my_pos)
-			else:
-				
-				collision_point.push(my_pos)
+			if ray_casts[i].get_collider() != $"../../..":
+				var my_pos = get_global_position()
+				collision_point = ray_casts[i].get_collider()
+				if self.is_pull:
+					collision_point.pull(my_pos)
+				else:
+					
+					collision_point.push(my_pos)
 				
 		
 	#if ray_cast.self.is_colliding():

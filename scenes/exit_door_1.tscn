@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://wa1jlu46hl3b"]
+
+[ext_resource type="Script" path="res://ExitDoor1.gd" id="1_6ae8e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dil28"]
+size = Vector2(20, 36)
+
+[node name="ExitDoor1" type="Node2D"]
+script = ExtResource("1_6ae8e")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -8)
+shape = SubResource("RectangleShape2D_dil28")
