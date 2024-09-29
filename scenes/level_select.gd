@@ -71,46 +71,44 @@ func _on_lvl_6_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl5completed == true:
 		await get_tree().create_timer(0.1).timeout
-		pass # Replace with function body.
-
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_6.tscn")
 
 func _on_lvl_7_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl6completed == true:
 		await get_tree().create_timer(0.1).timeout
-		pass # Replace with function body.
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_7.tscn")
 
 
 func _on_lvl_8_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl7completed == true:
 		await get_tree().create_timer(0.1).timeout
-		pass # Replace with function body.
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_8.tscn")
 
 
 func _on_lvl_9_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl8completed == true:
 		await get_tree().create_timer(0.1).timeout
-		pass # Replace with function body.
-
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_9.tscn")
 
 func _on_lvl_10_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl9completed == true:
 		await get_tree().create_timer(0.1).timeout
-		pass # Replace with function body.
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_10.tscn")
 
 
 func _on_lvl_11_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl10completed == true:
 		await get_tree().create_timer(0.1).timeout
-		pass # Replace with function body.
+		get_tree().change_scene_to_file("res://scenes/levels/play_level_11.tscn")
 
 
 func _on_lvl_12_pressed():
 	$AudioStreamPlayer2D.play()
 	if Completed.lvl11completed == true:
 		await get_tree().create_timer(0.1).timeout
-		get_tree().change_scene_to_file("res://scenes/test_level.tscn")
+		get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

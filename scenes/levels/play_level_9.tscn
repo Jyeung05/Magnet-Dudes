@@ -1,33 +1,72 @@
-[gd_scene load_steps=7 format=3 uid="uid://clm6nmbbn60my"]
+[gd_scene load_steps=9 format=3 uid="uid://bifqjnn3ybbxg"]
 
-[ext_resource type="PackedScene" uid="uid://bry13vifq7yl5" path="res://scenes/levels/level9.tscn" id="1_2xkwc"]
-[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="2_e4pmc"]
-[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="3_lkcw0"]
-[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="4_h765a"]
-[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="5_vnpa6"]
-[ext_resource type="PackedScene" uid="uid://bmdoysgy0nx51" path="res://scenes/floaty_box.tscn" id="6_w7mex"]
+[ext_resource type="PackedScene" uid="uid://duw7fouv7ex15" path="res://scenes/levels/level9.tscn" id="1_ha0su"]
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="2_75b3m"]
+[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="3_tpif0"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="4_3ahda"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="5_lnpm5"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="6_3skof"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="7_68tp4"]
+[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="8_d0yaa"]
 
-[node name="play_level_6" type="Node2D"]
+[node name="play_level_9" type="Node2D"]
 
-[node name="Level3" parent="." instance=ExtResource("1_2xkwc")]
-position = Vector2(11, -33)
+[node name="background2" parent="." instance=ExtResource("2_75b3m")]
+offset_left = -157.0
+offset_top = -76.0
+offset_right = 2200.0
+offset_bottom = 1180.0
+metadata/_edit_use_anchors_ = true
 
-[node name="player1" parent="." instance=ExtResource("2_e4pmc")]
-position = Vector2(892, 605)
-collision_layer = 8
-collision_mask = 5
+[node name="back_button" parent="." instance=ExtResource("3_tpif0")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 42.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
 
-[node name="player2" parent="." instance=ExtResource("3_lkcw0")]
-position = Vector2(141, 971)
-collision_layer = 16
+[node name="TextEdit3" type="TextEdit" parent="."]
+texture_filter = 2
+offset_left = 786.0
+offset_top = 36.0
+offset_right = 1126.0
+offset_bottom = 116.0
+theme_override_font_sizes/font_size = 22
+text = "Hint: use the box to help blue 
+dude over"
+editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
 
-[node name="ExitDoor1" parent="." instance=ExtResource("4_h765a")]
-position = Vector2(974, 635)
+[node name="player1" parent="." instance=ExtResource("4_3ahda")]
+position = Vector2(243, 1026)
+
+[node name="player2" parent="." instance=ExtResource("5_lnpm5")]
+position = Vector2(83, 1025)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("6_3skof")]
+position = Vector2(174, 302)
 scale = Vector2(2, 2)
+stage = 8
 
-[node name="ExitDoor2" parent="." instance=ExtResource("5_vnpa6")]
-position = Vector2(861, 1051)
+[node name="ExitDoor2" parent="." instance=ExtResource("7_68tp4")]
+position = Vector2(62, 306)
 scale = Vector2(2, 2)
+stage = 8
 
-[node name="floaty_box" parent="." instance=ExtResource("6_w7mex")]
-position = Vector2(797, 540)
+[node name="Level9" parent="." instance=ExtResource("1_ha0su")]
+
+[node name="Box" parent="." instance=ExtResource("8_d0yaa")]
+position = Vector2(1149, 481)

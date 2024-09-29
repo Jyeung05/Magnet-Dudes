@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_1cbuv"]
 [ext_resource type="PackedScene" uid="uid://cc2o2bk7gc1y7" path="res://scenes/levels/level5.tscn" id="1_s081a"]
 [ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_u6fgn"]
-[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="4_1a7f4"]
+[ext_resource type="PackedScene" uid="uid://cra0slgvx5y1j" path="res://scenes/heavy_box.tscn" id="4_1a7f4"]
 [ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_s6blb"]
 [ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_hj6wu"]
 [ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_8ww2y"]
@@ -18,7 +18,6 @@ offset_bottom = 2000.0
 
 [node name="player1" parent="." instance=ExtResource("3_u6fgn")]
 position = Vector2(278, 976)
-collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("4_s6blb")]
 position = Vector2(962, 974)
@@ -36,7 +35,7 @@ position = Vector2(799, 985)
 position = Vector2(1472, 983)
 
 [node name="ExitDoor1" parent="." instance=ExtResource("5_hj6wu")]
-position = Vector2(950, 257)
+position = Vector2(966, 290)
 scale = Vector2(2, 2)
 stage = 4
 
@@ -53,11 +52,20 @@ position = Vector2(695, 985)
 
 [node name="TextEdit2" type="TextEdit" parent="."]
 texture_filter = 2
-offset_left = 763.0
-offset_top = 542.0
-offset_right = 1095.0
-offset_bottom = 641.0
+offset_left = 737.0
+offset_top = 403.0
+offset_right = 1205.0
+offset_bottom = 571.0
 theme_override_font_sizes/font_size = 22
 text = "Boxes are objects that can be 
-pushed, pulled, and stood on."
+pushed, pulled, and stood on.
+try stacking them and pushing blue dude
+ up"
 editable = false
+context_menu_enabled = false
+shortcut_keys_enabled = false
+selecting_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+virtual_keyboard_enabled = false
+middle_mouse_paste_enabled = false
