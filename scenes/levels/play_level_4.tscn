@@ -33,6 +33,7 @@ metadata/_edit_use_anchors_ = true
 
 [node name="player1" parent="." instance=ExtResource("3_2xqug")]
 position = Vector2(1455, 1005)
+collision_mask = 5
 
 [node name="player2" parent="." instance=ExtResource("4_2qw81")]
 position = Vector2(318, 1009)
