@@ -2,7 +2,6 @@
 
 ![](logo.png)
 
-
 Magnet Dudes is a game created for the Mini Jame Gam #35. It is a speedrun puzzle game based off the themes switching dimensions and magnetism. As you progress through the game, you'll learn new techniques or mechanics that can help you in solving the puzzles for the following stages.
 
 To download the game for yourself download this git repository and run the executable (Magnet Dudes).
