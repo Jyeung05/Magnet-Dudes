@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bmdoysgy0nx51"]
+
+[ext_resource type="Script" path="res://box_floaty.gd" id="1_eetc0"]
+[ext_resource type="Texture2D" uid="uid://bsm7hisfnisie" path="res://icon.svg" id="2_q0med"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmdsu"]
+size = Vector2(122, 124)
+
+[node name="floaty_box" type="CharacterBody2D"]
+collision_layer = 255
+collision_mask = 255
+script = ExtResource("1_eetc0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_vmdsu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_q0med")
