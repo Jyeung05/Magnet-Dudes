@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://dyc04omjti6ch"]
+
+[ext_resource type="PackedScene" uid="uid://dtq0kyda08ss" path="res://scenes/background.tscn" id="1_io1a2"]
+[ext_resource type="PackedScene" uid="uid://b50psm67pxg3w" path="res://back_button.tscn" id="2_vnhj2"]
+[ext_resource type="PackedScene" uid="uid://c1x2qhmk57cxx" path="res://scenes/player_1.tscn" id="3_jjlca"]
+[ext_resource type="PackedScene" uid="uid://bl67y8oanwipu" path="res://scenes/player_2.tscn" id="4_gyxtx"]
+[ext_resource type="PackedScene" uid="uid://cgjjot70kucx0" path="res://scenes/exit_door_1.tscn" id="5_150ny"]
+[ext_resource type="PackedScene" uid="uid://df0734kckkaa6" path="res://scenes/exit_door_2.tscn" id="6_eukn8"]
+[ext_resource type="PackedScene" uid="uid://c4d5wbr86d4wl" path="res://scenes/levels/level7.tscn" id="7_aa1bj"]
+[ext_resource type="PackedScene" uid="uid://ehm58gp1pe1g" path="res://scenes/heavy_box.tscn" id="8_knunb"]
+
+[node name="play_level_4" type="Node2D"]
+
+[node name="background2" parent="." instance=ExtResource("1_io1a2")]
+offset_left = -157.0
+offset_top = -76.0
+offset_right = 2200.0
+offset_bottom = 1180.0
+metadata/_edit_use_anchors_ = true
+
+[node name="back_button" parent="." instance=ExtResource("2_vnhj2")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 42.0
+offset_top = 40.0
+offset_right = 42.0
+offset_bottom = 40.0
+grow_horizontal = 1
+grow_vertical = 1
+size_flags_horizontal = 0
+size_flags_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="player1" parent="." instance=ExtResource("3_jjlca")]
+position = Vector2(334, 851)
+
+[node name="player2" parent="." instance=ExtResource("4_gyxtx")]
+position = Vector2(1490, 844)
+
+[node name="ExitDoor1" parent="." instance=ExtResource("5_150ny")]
+position = Vector2(1828, 435)
+scale = Vector2(2, 2)
+stage = 6
+
+[node name="ExitDoor2" parent="." instance=ExtResource("6_eukn8")]
+position = Vector2(124, 420)
+scale = Vector2(2, 2)
+stage = 6
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+texture_filter = 2
+offset_left = 690.0
+offset_top = 26.0
+offset_right = 1258.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 22
+text = "Hint: you can use the pull mode to carry each other"
+editable = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Level3" parent="." instance=ExtResource("7_aa1bj")]
+
+[node name="Box" parent="." instance=ExtResource("8_knunb")]
+position = Vector2(511, 363)
+
+[node name="Box2" parent="." instance=ExtResource("8_knunb")]
+position = Vector2(278, 363)
+
+[node name="Box3" parent="." instance=ExtResource("8_knunb")]
+position = Vector2(398, 362)
